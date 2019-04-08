@@ -1,0 +1,237 @@
+/*==========  Variables  ==========*/
+
+$pg-bg:             #f3f3f3;
+$mental:             #0064F0;
+$physical:             #EE5243 ;
+// $rr-bg-hover:       darken($rr-bg, 10%);
+
+$height:         350px;
+$slant:          300px;
+$gutter:         1%;
+$width:          100%;
+.hero-section {
+  // margin-bottom: 50px;
+
+  .head-bg {
+    position: relative;
+    height: $height;
+    padding: 0;
+    top: -15px;
+    transition: .2s ease-in-out;
+
+    &.mental-bg {
+      background: $physical;
+      z-index: 1;
+      float: left;
+      left: -100%;
+      width: 200%;
+
+      -webkit-transform: skew(-30deg);
+      -moz-transform: skew(-30deg);
+      transform: skew(-30deg);
+      background: -webkit-linear-gradient(45deg, rgb(255, 12, 0), rgb(251, 127, 80) 100%);
+    }
+
+    &.physical-bg {
+      background: $mental;
+      z-index: 1;
+      float: right;
+      right: -101%;
+      width: 200%;
+
+      -webkit-transform: skew(-30deg);
+      -moz-transform: skew(-30deg);
+      transform: skew(-30deg);
+    }
+  }
+
+  .head-bg:after,
+  .head-bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .mental-bg:after {
+    right: 0;
+    //border-left: $slant solid $mental;
+    border-bottom: $height solid $pg-bg;
+  }
+
+  .physical-bg:before {
+    left: -$slant;
+    //border-right: $slant solid $physical;
+    border-top: $height solid rgba(0, 0, 0, 0);
+  }
+
+  .head-bg:hover {
+    // background: yellow;
+    cursor: pointer;
+    -webkit-transform: skew(-30deg) scale(1.02);
+    -moz-transform: skew(-30deg) scale(1.02);
+    transform: skew(-30deg) scale(1.02);
+    z-index: 2;
+  }
+
+  .mental-section,
+  .physical-section {
+    -webkit-transform: skew(30deg);
+    -moz-transform: skew(30deg);
+    transform: skew(30deg);
+
+    transform: skew(30deg) translateX(50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 25%;
+    width: 30%;
+    justify-content: center;
+    height: 100%;
+
+    .hero-img {
+      display: block;
+      max-height: 230px;
+      max-width: 377px;
+      height: calc(100vw* (230/1300));
+      width: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+
+    .mental-img {
+      background-image: url(/assets/images/physical_section.png);
+    }
+
+    .physical-img {
+      background-image: url(/assets/images/mental_section.png);
+    }
+
+    h1 {
+      font-weight: bold;
+      color: #fff;
+      padding-top: 20px;
+    }
+
+    img {
+      height: 250px;
+      margin-bottom: 20px;
+      padding: 20px 20px 0 150px;
+    }
+  }
+
+  .physical-section {
+    right: unset;
+    left: 30%;
+    transform: skew(30deg) translateX(-50%);
+  }
+}
+.home-section{
+
+.mental_card{
+  background-image: url(/assets/images/mental_section.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
+  background-color: $physical;
+  cursor: pointer;
+  z-index: 1;
+  float: right;
+  right: -101%;
+  width: 200%;
+  -webkit-transform: skew(-30deg);
+  transform: skew(-30deg);
+  /* width: 125%; */
+  }
+  .physical_card{
+    background-image: url(/assets/images/physical_section.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 250px;
+    background-color: $mental;
+    cursor: pointer;
+    -webkit-transform: skew(-30deg);
+    -ms-transform: skew(-30deg);
+    transform: skew(-30deg);
+    z-index: 1;
+    float: left;
+    left: -100%;
+    width: 200%;
+    -webkit-transform: skew(-30deg);
+    transform: skew(-30deg);
+  }
+  .center_header{
+    position: absolute;
+      width: 100%;
+      top: 40%;
+  }
+  
+}
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+@mixin transform-origin($property) {
+  -webkit-transform-origin: $property;
+  -ms-transform-origin: $property;
+  transform-origin: $property;
+}
+.contentSection{
+    margin: 0px 5px;
+    clear: both;
+    .tranform_text{
+      -webkit-transform: rotate(268deg);
+      -moz-transform: rotate(268deg);
+      -o-transform: rotate(268deg);
+      writing-mode: bt-lr;
+    }
+    .grid_img{
+      width: 100%;
+      margin: 15px 0px;
+    }
+    .py_ment_image_container{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 50px 125px 50px 0px;
+    }
+    
+    .m-40{
+      margin: 40px 0px 40px 0px !important;
+    }
+    .box_head_holder{
+      margin: 40px auto;
+    }
+    .expandedbox{
+      width: 74.5%;
+    }
+    .minimizedbox{
+      width: 24.5%;
+    }
+}
+.physicalSection{
+  // float: left;
+    .physicalSectionContainer{
+        background-image: url('/assets/images/physical-bg.png');
+    background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      height: 275px;
+    }
+  }
+  .mentalSection{
+    // float: right;
+      .mentalSectionContainer{
+        background-image: url('/assets/images/mental-bg.png');
+        background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          height: 275px;
+      }
+  }
+  

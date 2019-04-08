@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>{{confirmHeader}}</h2>
+<mat-divider></mat-divider>
+<mat-dialog-content>
+    <h6>{{confirmMessage}}</h6>
+</mat-dialog-content>
+<mat-divider></mat-divider>
+<mat-dialog-actions>
+    <button mat-flat-button color="warn" (click)="confirm(false)">No</button>
+    <button mat-flat-button (click)="confirm(true)">Yes</button>
+</mat-dialog-actions>

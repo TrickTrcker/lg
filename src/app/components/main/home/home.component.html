@@ -1,0 +1,124 @@
+<!-- Main navigation -->
+<div class="hero-section container-fluid">
+  <div class="row" style="overflow: hidden;">
+    <div class="col" style="padding: 0; position:relative;">
+      <div class="head-bg mental-bg">
+        <div class="mental-section">
+          <div class="hero-img mental-img">
+            <h1>Physical</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div  class="col" style="padding: 0; position:relative;">
+      <div class="head-bg physical-bg">
+        <div class="physical-section">
+          <div class="hero-img physical-img">
+          </div>
+          <h1 _ngcontent-c8="">
+            Mental</h1>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<section class="contentSection text-center  ">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="physicalSection" id="physicalSection"
+        [ngClass]="[(activedPhysicalSection == true) ? 'col-md-10': 'col-md-2']">
+        <div class="pb-2  physicalSectionContainer system_border_radius z-depth-1">
+          <!--Grid row-->
+          <div class="row mt-2">
+            <div [ngClass]="[(activedPhysicalSection == true) ? 'col-md-7': 'col-md-12']">
+              <div class="card-image ">
+                <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded">
+                  <div class="center-align-db box_head_holder" id="physicalSection_title">
+                    <h3 class="py-3 font-weight-bold box_title"  [ngClass]="{ 'tranform_text' :(activedPhysicalSection == false)}">
+                      <strong>Physical</strong>
+                    </h3>
+                    <button [ngClass]="{ 'hide' :(activedPhysicalSection == false)}" type="button" mdbBtn color="light" class="waves-light" mdbWavesEffect>
+                      <i class="far fa-clone left"></i> Create Graph
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" *ngIf="activedPhysicalSection == true">
+              <div class="row m-40">
+                <div class="col-lg-4 col-md-4 mx-auto">
+                  <img src="/assets/images/physical/1.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+                <div class="col-lg-4 col-md-4 mx-auto">
+                  <img src="/assets/images/physical/2.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+                <div class="col-lg-4 col-md-4 mx-auto">
+                  <img src="/assets/images/physical/3.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+                <div class="col-lg-4 col-md-4 mx-auto">
+                  <img src="/assets/images/physical/4.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+                <div class="col-lg-4 col-md-4 mx-auto">
+                  <img src="/assets/images/physical/5.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+                <div class="col-lg-4 col-md-4 mx-auto">
+                  <img src="/assets/images/physical/6.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+
+              </div>
+            </div>
+            <!--Grid column-->
+          </div>
+        </div>
+      </div>
+      <div class="mentalSection" id="mentalSection"
+        [ngClass]="[(activatedMentalSection == true) ? 'col-md-10': 'col-md-2']">
+        <div class="pb-2  mentalSectionContainer system_border_radius z-depth-1">
+          <div class="row mt-2">
+            <div
+              [ngClass]="[(activatedMentalSection == true) ? 'col-md-7': 'col-md-12',(activatedMentalSection == true) ? 'rotateOutUpLeft': 'rotateOutUpRight']">
+              <div class="card-image " style="    padding: 78px 0px;">
+                <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded">
+                  <div class="center-align-db box_head_holder" id="mentalSection_title">
+                    <h3 class="py-3 font-weight-bold box_title" [ngClass]="{ 'tranform_text' :(activatedMentalSection == false)}">
+                      <strong>Mental</strong>
+                    </h3>
+                    <button [ngClass]="{ 'hide' :(activatedMentalSection == false)}" type="button" mdbBtn color="light" class="waves-light" mdbWavesEffect>
+                      <i class="far fa-clone left"></i> Create Graph
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" *ngIf="activatedMentalSection == true">
+              <div class="row m-40">
+                <div class="col-lg-4 col-md-4 mx-auto">
+                  <img src="/assets/images/physical/1.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+                <div class="col-lg-4 col-md-4 mx-auto">
+                  <img src="/assets/images/physical/2.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+                <div class="col-lg-4 col-md-4 mx-auto">
+                  <img src="/assets/images/physical/3.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+                <div class="col-lg-4 col-md-4  mx-auto">
+                  <img src="/assets/images/physical/4.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+                <div class="col-lg-4 col-md-4  mx-auto">
+                  <img src="/assets/images/physical/5.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+                <div class="col-lg-4 col-md-4 mx-auto">
+                  <img src="/assets/images/physical/6.jpg" class="img-fluid z-depth-3 grid_img">
+                </div>
+
+              </div>
+            </div>
+            <!--Grid column-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

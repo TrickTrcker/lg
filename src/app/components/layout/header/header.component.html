@@ -1,0 +1,116 @@
+<!-- Main navigation -->
+<header>
+  <!--Navbar-->
+  <div class="container-fluid">
+    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark  fixed-top scrolling-navbar">
+      <mdb-navbar-brand>
+        <a class="logo navbar-brand waves-light" mdbWavesEffect href="#"><strong>LifeGraph</strong></a>
+      </mdb-navbar-brand>
+      <links>
+        <ul class="navbar-nav">
+          <li class="nav-item active waves-light" mdbWavesEffect>
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+            <a class="nav-link" href="#">Mental</a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+            <a class="nav-link" href="#">Physical</a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+            <a class="nav-link" href="#">Special</a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <form class="search_form">
+          <div class="md-form my-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          </div>
+        </form>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link">
+                <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link">
+                <div class="btn-group" mdbDropdown>
+                  <span class="font-weight-bold">EN</span>  
+                  <mdb-icon fas icon="caret-down"  mdbDropdownToggle></mdb-icon>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+              </a>
+            </li>
+        </ul>
+      </links>
+    </mdb-navbar>
+  </div>
+  <!-- Full Page Intro -->
+  <div class="view"
+    style="background-image: url('/assets/images/bg/3.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-gradient d-flex justify-content-center align-items-top">
+      <!-- Content -->
+      <div class="container">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div
+            class="col-md-9 offset-md-2 col-lg-9 offset-lg-2 col-sm-8  offset-sm-2  white-text text-center text-md-left  wow fadeInLeft inner_lessopacity"
+            data-wow-delay="0.3s">
+            <div class="banner_desc system_border_radius">
+              <h1 class="h1-responsive font-weight-bold ">How does it works </h1>
+              <hr class="hr-light">
+              <h6 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi
+                fuga nesciunt
+                dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiaeLorem ipsum
+                dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi
+                fuga nesciunt
+                dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
+                iste.</h6>
+            </div>
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+    <div class="Mask align-items-center flex-arrow-holder">
+      <div class="container-fluid">
+        <!--Grid row-->
+        <div class="row arrowholder">
+          <div class="col-md-6 text-md-center">
+            <a class="arrow_btn" [routerLink]="['home']" [queryParams]="{ section: 'physical'}" (click)="scrollToSection('#physicalSection')" >
+              <mdb-icon fas class="physical_themecolorLight pr-3 arrow_bounce" data-wow-delay="1s" icon="chevron-down" size="4x">
+              </mdb-icon>
+            </a>
+          </div>
+          <div class="col-md-6 text-md-center">
+            <a class="arrow_btn " [routerLink]="['home']" [queryParams]="{ section: 'mental'}" (click)="scrollToSection('#mentalSection')">
+              <mdb-icon fas class="mental_themecolorLight pr-3 arrow_bounce" data-wow-delay="1s" icon="chevron-down" size="4x">
+              </mdb-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Full Page Intro -->
+</header>
+
