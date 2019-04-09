@@ -5,7 +5,7 @@ $mental:             #0064F0;
 $physical:             #EE5243 ;
 // $rr-bg-hover:       darken($rr-bg, 10%);
 
-$height:         350px;
+$height:         250px;
 $slant:          300px;
 $gutter:         1%;
 $width:          100%;
@@ -32,7 +32,7 @@ $width:          100%;
     position: relative;
     height: $height;
     padding: 0;
-    top: -15px;
+    // top: -15px;
     transition: .2s ease-in-out;
 
     &.mental-bg {
@@ -48,7 +48,8 @@ $width:          100%;
       background: -webkit-linear-gradient(45deg, rgb(255, 12, 0), rgb(251, 127, 80) 100%);
       background-image: url('/assets/images/physical-bg.png');
       background-size: cover;
-      background-position: center center
+      background-position: center center;
+      border-radius : 15px
     }
 
     &.physical-bg {
@@ -63,7 +64,8 @@ $width:          100%;
       transform: skew(-30deg);
       background-image : url('/assets/images/mental-bg.png');
        background-size: cover;
-      background-position: center center
+      background-position: center center;
+      border-radius : 15px
     }
   }
 
@@ -205,7 +207,7 @@ $width:          100%;
   transform-origin: $property;
 }
 .contentSection{
-    margin: -10px 0px;
+    margin: 5px 0px;
     clear: both;
     .tranform_text{
       -webkit-transform: rotate(268deg);
