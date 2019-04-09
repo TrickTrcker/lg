@@ -61,6 +61,9 @@
                 "input": "src/styles.scss"
               },
               {
+                "input": "src/assets/css/treeflex.scss"
+              },
+              {
                 "input": "src/assets/css/animation.css"
               }
             ],
@@ -173,7 +176,6 @@
         }
       }
     }
-   
   },
   "schematics": {
     "@schematics/angular:component": {

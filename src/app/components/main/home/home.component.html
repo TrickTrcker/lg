@@ -4,25 +4,24 @@
     <div class="col" style="padding: 0; position:relative;">
       <div class="head-bg mental-bg">
         <div class="mental-section">
-            <h1>Physical</h1>
+          <h1>Physical</h1>
         </div>
       </div>
     </div>
-    <div  class="col" style="padding: 0; position:relative;">
+    <div class="col" style="padding: 0; position:relative;">
       <div class="head-bg physical-bg">
         <div class="physical-section">
           <h1>Mental</h1>
-          </div>
         </div>
       </div>
+    </div>
   </div>
 </div>
 
 <section class="contentSection text-center  ">
   <div class="container-fluid">
     <div class="row">
-      <div class="physicalSection p-r-5 p-l-5" id="physicalSection"
-        [ngClass]="[(activedPhysicalSection == true) ? 'col-md-10': 'col-md-2']">
+      <div class="physicalSection p-r-5 p-l-5" id="physicalSection" [ngClass]="[(activedPhysicalSection == true) ? 'col-md-10': 'col-md-2']">
         <div class="pb-2  physicalSectionContainer system_border_radius z-depth-1">
           <!--Grid row-->
           <div class="row">
@@ -30,10 +29,11 @@
               <div class="card-image ">
                 <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded">
                   <div class="center-align-db box_head_holder" id="physicalSection_title">
-                    <h3 class="py-3 font-weight-bold box_title"  [ngClass]="{ 'tranform_text' :(activedPhysicalSection == false)}">
+                    <h3 class="py-3 font-weight-bold box_title" [ngClass]="{ 'tranform_text' :(activedPhysicalSection == false)}">
                       <strong>Physical</strong>
                     </h3>
-                    <button [ngClass]="{ 'hide' :(activedPhysicalSection == false)}" type="button" mdbBtn color="light" class="waves-light" mdbWavesEffect>
+                    <button [ngClass]="{ 'hide' :(activedPhysicalSection == false)}" type="button" mdbBtn color="light"
+                      class="waves-light" mdbWavesEffect>
                       <i class="far fa-clone left"></i> Create Graph
                     </button>
                   </div>
@@ -67,26 +67,25 @@
           </div>
         </div>
       </div>
-      <div class="mentalSection p-r-5 p-l-5" id="mentalSection"
-        [ngClass]="[(activatedMentalSection == true) ? 'col-md-10': 'col-md-2']">
+      <div class="mentalSection p-r-5 p-l-5" id="mentalSection" [ngClass]="[(activatedMentalSection == true) ? 'col-md-10': 'col-md-2']">
         <div class="pb-2  mentalSectionContainer system_border_radius z-depth-1">
           <div class="row m-r-0">
-            <div
-              [ngClass]="[(activatedMentalSection == true) ? 'col-md-7': 'col-md-12',(activatedMentalSection == true) ? 'rotateOutUpLeft': 'rotateOutUpRight']">
-              <div class="card-image " style="">
+            <div [ngClass]="[(activatedMentalSection == true) ? 'col-md-7': 'col-md-12',(activatedMentalSection == true) ? 'rotateOutUpLeft': 'rotateOutUpRight']">
+              <div class="card-image ">
                 <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded">
                   <div class="center-align-db box_head_holder" id="mentalSection_title">
                     <h3 class="py-3 font-weight-bold box_title" [ngClass]="{ 'tranform_text' :(activatedMentalSection == false)}">
                       <strong>Mental</strong>
                     </h3>
-                    <button [ngClass]="{ 'hide' :(activatedMentalSection == false)}" type="button" mdbBtn color="light" class="waves-light" mdbWavesEffect>
+                    <button [ngClass]="{ 'hide' :(activatedMentalSection == false)}" type="button" mdbBtn color="light"
+                      class="waves-light" mdbWavesEffect>
                       <i class="far fa-clone left"></i> Create Graph
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-          
+
             <div class="col-md-4" *ngIf="activatedMentalSection == true">
               <div class="row m-40">
                 <div class="col-lg-4 col-md-4 mx-auto">
@@ -110,11 +109,77 @@
 
               </div>
             </div>
-            </div>
-            <!--Grid column-->
+          </div>
+          <!--Grid column-->
         </div>
       </div>
     </div>
   </div>
+  <br />
+  <br />
+  
+  <!-- add new tree node start-->
+
+  <div class="tf-tree example">
+    <ul>
+      <li>
+        <span class="tf-nc"><span>Climbing</span><br />
+          <i class="fas fa-plus-square"></i>
+          <br />
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="img-burst" alt="aligment">
+        </span>
+        <ul>
+          <li>
+            <span class="tf-nc">
+              <span>Climbing</span><br />
+              <i class="fas fa-plus-square"></i> 
+              <br /><br />
+              <div class="img-burst"></div>
+            </span>
+            <ul>
+              <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+                  <br />
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
+                    alt="aligment"></span></li>
+              <li>
+                <span class="tf-nc"><i class="fas fa-plus-square"></i></span>
+                <ul>
+                  <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+                      <br />
+                      <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
+                        alt="aligment"></span></li>
+                  <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+                      <br />
+                      <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
+                        alt="aligment"></span></li>
+                </ul>
+              </li>
+              <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+                  <br />
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
+                    alt="aligment"></span></li>
+            </ul>
+          </li>
+          <li>
+            <span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+              <br />
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block" alt="aligment">
+            </span>
+            <ul>
+              <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+                  <br />
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
+                    alt="aligment"></span></li>
+              <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+                  <br />
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
+                    alt="aligment"></span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!-- end -->
 
 </section>
