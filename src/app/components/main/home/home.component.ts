@@ -1,8 +1,8 @@
-import { Component,Inject, OnInit,ViewChild } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { ActivityService } from '../../../services/activity/activity.service';
 import { Skill } from '../../../models/skill';
 import { DOCUMENT } from '@angular/common';
-import {MatDialog, MatDialogConfig} from '@angular/material';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
 import { PageScrollService } from 'ngx-page-scroll-core';
 // import {SkillAddEditComponent} from '../../skills/skill-add-edit/skill-add-edit.component';
@@ -18,46 +18,51 @@ export class HomeComponent implements OnInit {
   activities: Array<Skill>;
 
   phisicalSkill = {
-   uid: 'FD57F4000FF141F5B390B4E703DED138'
+    uid: 'FD57F4000FF141F5B390B4E703DED138'
   } as Skill;
-  
+
   mentalSkill = {
-   uid: 'CAB8B4C4AFB74CEABB5F687AB4AAF2A8'
+    uid: 'CAB8B4C4AFB74CEABB5F687AB4AAF2A8'
   } as Skill;
- 
-   lastSkill: Skill = new Skill();
-   parentSkillId = '';
- 
-  slideConfig = {"slidesToShow": 3, "slidesToScroll": 3};
- 
-   skillsCarousels: Array<Array<Skill>> = new Array<Array<Skill>>();
- 
-   actId: string;
-   activedPhysicalSection:boolean=false;
-   activatedMentalSection:boolean=false;
+
+  lastSkill: Skill = new Skill();
+  parentSkillId = '';
+
+  slideConfig = { "slidesToShow": 3, "slidesToScroll": 3 };
+
+  skillsCarousels: Array<Array<Skill>> = new Array<Array<Skill>>();
+
+  actId: string;
+  activedPhysicalSection: boolean = false;
+  activatedMentalSection: boolean = false;
+  activatesection: boolean = false;
   //  @ViewChild(SkillsTreeComponent) skillsTreeComponentRef: SkillsTreeComponent;
   constructor(private dialog: MatDialog,
-    private activityService: ActivityService,private route: ActivatedRoute,
-    @Inject(DOCUMENT) private _document: Document,private pageScrollService: PageScrollService) { }
+    private activityService: ActivityService, private route: ActivatedRoute,
+    @Inject(DOCUMENT) private _document: Document, private pageScrollService: PageScrollService) {
+
+  }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      if(! _.isEmpty(params["section"])){
-        if(params["section"] == "physical"){
+      if (!_.isEmpty(params["section"])) {
+        if (params["section"] == "physical") {
+          this.activatesection = true;
           this.activedPhysicalSection = true;
-          this.activatedMentalSection=false;
+          this.activatedMentalSection = false;
           setTimeout(() => {
             $("#mentalSection_title").addClass("rotateOutUpLeft");
           }, 5000);
           // $("#physicalSection").addClass
         }
-        else if(params["section"] == "mental"){
+        else if (params["section"] == "mental") {
+          this.activatesection = true;
           this.activedPhysicalSection = false;
-          this.activatedMentalSection=true;
+          this.activatedMentalSection = true;
         }
       }
       console.log(params);
-  })
+    })
   }
   getSkillsByActivityId(skill: Skill, cleanArray: boolean) {
     this.lastSkill = skill;
@@ -68,8 +73,8 @@ export class HomeComponent implements OnInit {
           s.parentSkillId = skill.uid;
         })
       }
-      
-      let index = this.skillsCarousels.findIndex((element)=> {
+
+      let index = this.skillsCarousels.findIndex((element) => {
         return (element && element.length > 0 ? element[0].parentSkillId == skill.parentSkillId : false);
       });
 
@@ -80,7 +85,7 @@ export class HomeComponent implements OnInit {
       this.scrollToAnchor((index + 1).toString(), 100);
     });
   }
-  
+
   getSkillHeaderText(i: number, parentSkillId: string) {
     if (i != 0) {
       try {
@@ -98,16 +103,16 @@ export class HomeComponent implements OnInit {
       const element = document.getElementById(location);
       if (element) {
         setTimeout(() => {
-          element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'})
+          element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
         }, wait / 2)
       }
-      }, wait / 2)
+    }, wait / 2)
   }
 
   openAddDialog() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
-    dialogConfig.panelClass ="custom-dialog-container";
+    dialogConfig.panelClass = "custom-dialog-container";
     // const dialogRef = this.dialog.open(SkillAddEditComponent, dialogConfig);
     // dialogRef.componentInstance.parentTreeSkillId = this.parentSkillId;
     // dialogRef.componentInstance.skill = {parentSkillId: this.lastSkill.uid} as Skill;
@@ -119,9 +124,9 @@ export class HomeComponent implements OnInit {
     this.pageScrollService.scroll({
       document: this._document,
       scrollTarget: section,
-      scrollOffset : 55,
-      duration : 1000,
-      interruptible : false
+      scrollOffset: 55,
+      duration: 1000,
+      interruptible: false
     });
   }
 }
