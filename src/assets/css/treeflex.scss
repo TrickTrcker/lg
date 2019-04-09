@@ -1,7 +1,8 @@
 $primary_color: #000;
-$scaling_factor: 1; 
+$scaling_factor: 1;
 
-$node_gap: 1em; /* setting a size in em makes sure that the gap scales too with the scaling factor */
+$node_gap: 1em;
+/* setting a size in em makes sure that the gap scales too with the scaling factor */
 $sm_node_gap: $node_gap * .6;
 $lg_node_gap: $node_gap * 1.5;
 
@@ -12,210 +13,294 @@ $connector_style: solid;
 $secondary_color:red;
 
 .tf-tree {
-  overflow: auto;
-  font-size: 16px * $scaling_factor;
-  
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  ul { display: inline-flex; }
+    overflow: auto;
+    font-size: 16px * $scaling_factor;
 
-  li {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0 $node_gap;
-
-    ul { margin: ($node_gap * 2) 0; }
-    
-    li:before {
-      display: block;
-      position: absolute;
-      width: 100%;
-      left: calc(0% - #{$connector_width / 2});
-      top: calc(#{-$node_gap} - #{$connector_width / 2});
-      content: '';
-      border-top: $connector_width $connector_style $primary_color;
-      height: $connector_width;
-    }
-    
-    li:first-child:before {
-      left: calc(50% - #{$connector_width / 2});
-      max-width: calc(100% - 50% + #{$connector_width});
-    }
-    li:last-child:before {
-      left: auto;
-      right: calc(50% - #{$connector_width / 2});
-      max-width: calc(100% - 50% + #{$connector_width});
-    }
-    li:only-child:before { display: none; }
-
-    li:only-child > .tf-node-content:before,
-    li:only-child > .tf-nc:before {
-      height: calc(#{$node_gap} + #{$connector_width});
-      top: calc(#{-$node_gap} - #{$connector_width});
-    }
-  }
-
-  .tf-node-content, .tf-nc {
-    position: relative;
-    display: inline-block;
-    border: $connector_width solid $primary_color;
-    padding: ($node_gap / 2) $node_gap;
-
-    &:before {
-      position: absolute;
-      display: block;
-      height: $node_gap;
-      left: calc(50% - #{$connector_width / 2});
-      top: calc(#{-$node_gap} - #{$connector_width / 2});
-      content: '';
-      border-left: $connector_width $connector_style $primary_color;
-      width: $connector_width;
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
     }
 
-    &:after {
-      position: absolute;
-      display: block;
-      height: $node_gap;
-      left: calc(50% - #{$connector_width / 2});
-      top: calc(100% + #{$connector_width / 2});
-      content: '';
-      border-left: $connector_width $connector_style $primary_color;
-      width: $connector_width;
+    ul {
+        display: inline-flex;
     }
-    &:only-child:after { display: none; }
-  }
-  
-  >ul>li>.tf-node-content:before, >ul>li>.tf-nc:before { display: none; }
 
-  &.tf-gap-sm li {
-    padding: 0 $sm_node_gap;
-    >.tf-node-content, >.tf-nc {
-      &:before {
-        height: $sm_node_gap;
-        top: -$sm_node_gap;
-      } 
-      &:after { height: $sm_node_gap; }
-    } 
-    ul { margin: ($sm_node_gap * 2) 0; }
-    li:before { top: calc(#{-$sm_node_gap} - #{$connector_width / 2}); }
+    li {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 $node_gap;
 
-    li:only-child > .tf-node-content:before,
-    li:only-child > .tf-nc:before {
-      height: calc(#{$sm_node_gap} + #{$connector_width});
-      top: calc(#{-$sm_node_gap} - #{$connector_width});
+        ul {
+            margin: ($node_gap * 2) 0;
+        }
+
+        li:before {
+            display: block;
+            position: absolute;
+            width: 100%;
+            left: calc(0% - #{$connector_width / 2});
+            top: calc(#{-$node_gap} - #{$connector_width / 2});
+            content: '';
+            border-top: $connector_width $connector_style $primary_color;
+            height: $connector_width;
+        }
+
+        li:first-child:before {
+            left: calc(50% - #{$connector_width / 2});
+            max-width: calc(100% - 50% + #{$connector_width});
+        }
+
+        li:last-child:before {
+            left: auto;
+            right: calc(50% - #{$connector_width / 2});
+            max-width: calc(100% - 50% + #{$connector_width});
+        }
+
+        li:only-child:before {
+            display: none;
+        }
+
+        li:only-child>.tf-node-content:before,
+        li:only-child>.tf-nc:before {
+            height: calc(#{$node_gap} + #{$connector_width});
+            top: calc(#{-$node_gap} - #{$connector_width});
+        }
     }
-  }
-  
-  &.tf-gap-lg li {
-    padding: 0 $lg_node_gap;
-    >.tf-node-content, >.tf-nc {
-      &:before {
-        height: $lg_node_gap;
-        top: -$lg_node_gap;
-      } 
-      &:after { height: $lg_node_gap; }
-    } 
-    ul { margin: ($lg_node_gap * 2) 0; }
-    li:before { top: calc(#{-$lg_node_gap} - #{$connector_width / 2}); }
 
-    li:only-child > .tf-node-content:before,
-    li:only-child > .tf-nc:before {
-      height: calc(#{$lg_node_gap} + #{$connector_width});
-      top: calc(#{-$lg_node_gap} - #{$connector_width});
-    }
-  }
+    .tf-node-content,
+    .tf-nc {
+        position: relative;
+        display: inline-block;
+        border: $connector_width solid $primary_color;
+        padding: ($node_gap / 2) $node_gap;
 
-  li.tf-dotted-children {
-    .tf-node-content, .tf-nc {
-      &:before, &:after { border-left-style: dotted; }
-    }
-    li:before { border-top-style: dotted; }
+        &:before {
+            position: absolute;
+            display: block;
+            height: $node_gap;
+            left: calc(50% - #{$connector_width / 2});
+            top: calc(#{-$node_gap} - #{$connector_width / 2});
+            content: '';
+            border-left: $connector_width $connector_style $primary_color;
+            width: $connector_width;
+        }
 
-    >.tf-node-content:before, >.tf-nc:before {
-      border-left-style: solid;
-    }
-  }
+        &:after {
+            position: absolute;
+            display: block;
+            height: $node_gap;
+            left: calc(50% - #{$connector_width / 2});
+            top: calc(100% + #{$connector_width / 2});
+            content: '';
+            border-left: $connector_width $connector_style $primary_color;
+            width: $connector_width;
+        }
 
-  li.tf-dashed-children {
-    .tf-node-content, .tf-nc {
-      &:before, &:after { border-left-style: dashed; }
+        &:only-child:after {
+            display: none;
+        }
     }
-    li:before { border-top-style: dashed; }
 
-    >.tf-node-content:before, >.tf-nc:before {
-      border-left-style: solid;
+    >ul>li>.tf-node-content:before,
+    >ul>li>.tf-nc:before {
+        display: none;
     }
-  }
-  .img-burst {
-    background: url("http://lorempixel.com/output/sports-q-c-640-480-3.jpg");
-    width: 80px;
-    height: 80px;
-    position: relative;
-    text-align: center;
-    transform: rotate(20deg);
-  }
-  .img-burst:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 80px;
-    width: 80px;
-    background: url("http://lorempixel.com/output/sports-q-c-640-480-3.jpg");
-    transform: rotate(135deg);
-  }
-  
-  .img-octagon {
-    width: 100px;
-    height: 100px;
-    background: url("http://lorempixel.com/output/nature-q-c-640-480-4.jpg");
-    position: relative;
-  }
-  .img-octagon:before {
-    content: "";
-    width: 100px;
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-bottom: 29px solid red;
-    border-left: 29px solid #eee;
-    border-right: 29px solid #eee; 
-  }
-  .img-octagon:after {
-    content: "";
-    width: 100px;
-    height: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-top: 29px solid red;
-    border-left: 29px solid #eee;
-    border-right: 29px solid #eee; 
-  }  
-  
-  .img-diamond {
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-bottom-color: red;
-    position: relative;
-    top: -50px;
-  }
-  .img-diamond:after {
-    content: '';
-    position: absolute;
-    left: -50px;
-    top: 50px;
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-top-color: red;
-  }
+
+    &.tf-gap-sm li {
+        padding: 0 $sm_node_gap;
+
+        >.tf-node-content,
+        >.tf-nc {
+            &:before {
+                height: $sm_node_gap;
+                top: -$sm_node_gap;
+            }
+
+            &:after {
+                height: $sm_node_gap;
+            }
+        }
+
+        ul {
+            margin: ($sm_node_gap * 2) 0;
+        }
+
+        li:before {
+            top: calc(#{-$sm_node_gap} - #{$connector_width / 2});
+        }
+
+        li:only-child>.tf-node-content:before,
+        li:only-child>.tf-nc:before {
+            height: calc(#{$sm_node_gap} + #{$connector_width});
+            top: calc(#{-$sm_node_gap} - #{$connector_width});
+        }
+    }
+
+    &.tf-gap-lg li {
+        padding: 0 $lg_node_gap;
+
+        >.tf-node-content,
+        >.tf-nc {
+            &:before {
+                height: $lg_node_gap;
+                top: -$lg_node_gap;
+            }
+
+            &:after {
+                height: $lg_node_gap;
+            }
+        }
+
+        ul {
+            margin: ($lg_node_gap * 2) 0;
+        }
+
+        li:before {
+            top: calc(#{-$lg_node_gap} - #{$connector_width / 2});
+        }
+
+        li:only-child>.tf-node-content:before,
+        li:only-child>.tf-nc:before {
+            height: calc(#{$lg_node_gap} + #{$connector_width});
+            top: calc(#{-$lg_node_gap} - #{$connector_width});
+        }
+    }
+
+    li.tf-dotted-children {
+
+        .tf-node-content,
+        .tf-nc {
+
+            &:before,
+            &:after {
+                border-left-style: dotted;
+            }
+        }
+
+        li:before {
+            border-top-style: dotted;
+        }
+
+        >.tf-node-content:before,
+        >.tf-nc:before {
+            border-left-style: solid;
+        }
+    }
+
+    li.tf-dashed-children {
+
+        .tf-node-content,
+        .tf-nc {
+
+            &:before,
+            &:after {
+                border-left-style: dashed;
+            }
+        }
+
+        li:before {
+            border-top-style: dashed;
+        }
+
+        >.tf-node-content:before,
+        >.tf-nc:before {
+            border-left-style: solid;
+        }
+    }
+
+    .img-burst {
+        background: url("http://lorempixel.com/output/sports-q-c-640-480-3.jpg");
+        width: 80px;
+        height: 80px;
+        position: relative;
+        text-align: center;
+        transform: rotate(20deg);
+    }
+
+    .img-burst:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 80px;
+        width: 80px;
+        background: url("http://lorempixel.com/output/sports-q-c-640-480-3.jpg");
+        transform: rotate(135deg);
+    }
+
+    .img-octagon {
+        width: 100px;
+        height: 100px;
+        background: url("http://lorempixel.com/output/nature-q-c-640-480-4.jpg");
+        position: relative;
+    }
+
+    .img-octagon:before {
+        content: "";
+        width: 100px;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom: 29px solid red;
+        border-left: 29px solid #eee;
+        border-right: 29px solid #eee;
+    }
+
+    .img-octagon:after {
+        content: "";
+        width: 100px;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: 29px solid red;
+        border-left: 29px solid #eee;
+        border-right: 29px solid #eee;
+    }
+
+    .img-diamond {
+        width: 0;
+        height: 0;
+        border: 50px solid transparent;
+        border-bottom-color: red;
+        position: relative;
+        top: -50px;
+    }
+
+    .img-diamond:after {
+        content: '';
+        position: absolute;
+        left: -50px;
+        top: 50px;
+        width: 0;
+        height: 0;
+        border: 50px solid transparent;
+        border-top-color: red;
+    }
+
+    .img-rhombus-shape {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    .img-round-shape {
+        -webkit-clip-path: inset(0% 0% 0% 0% round 5% 5% 5% 5%);
+        clip-path: inset(0% 0% 0% 0% round 5% 5% 5% 5%)
+    }
+
+    .t-icon-btn {
+        width: 30%;
+        height: 20%;
+        font-size: 20px;
+        background: #f85836 !important;
+    }
+
+    .t-margin {
+        margin: 5px 0px 5px 0px;
+    }
 }

@@ -21,7 +21,8 @@
 <section class="contentSection text-center  ">
   <div class="container-fluid">
     <div class="row">
-      <div class="physicalSection p-r-5 p-l-5" id="physicalSection" [ngClass]="[(activedPhysicalSection == true) ? 'col-md-10': 'col-md-2']">
+      <div class="physicalSection p-r-5 p-l-5" id="physicalSection"
+        [ngClass]="[(activedPhysicalSection == true) ? 'col-md-10': 'col-md-2']">
         <div class="pb-2  physicalSectionContainer system_border_radius z-depth-1">
           <!--Grid row-->
           <div class="row">
@@ -29,7 +30,8 @@
               <div class="card-image ">
                 <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded">
                   <div class="center-align-db box_head_holder" id="physicalSection_title">
-                    <h3 class="py-3 font-weight-bold box_title" [ngClass]="{ 'tranform_text' :(activedPhysicalSection == false)}">
+                    <h3 class="py-3 font-weight-bold box_title"
+                      [ngClass]="{ 'tranform_text' :(activedPhysicalSection == false)}">
                       <strong>Physical</strong>
                     </h3>
                     <button [ngClass]="{ 'hide' :(activedPhysicalSection == false)}" type="button" mdbBtn color="light"
@@ -67,14 +69,17 @@
           </div>
         </div>
       </div>
-      <div class="mentalSection p-r-5 p-l-5" id="mentalSection" [ngClass]="[(activatedMentalSection == true) ? 'col-md-10': 'col-md-2']">
+      <div class="mentalSection p-r-5 p-l-5" id="mentalSection"
+        [ngClass]="[(activatedMentalSection == true) ? 'col-md-10': 'col-md-2']">
         <div class="pb-2  mentalSectionContainer system_border_radius z-depth-1">
           <div class="row m-r-0">
-            <div [ngClass]="[(activatedMentalSection == true) ? 'col-md-7': 'col-md-12',(activatedMentalSection == true) ? 'rotateOutUpLeft': 'rotateOutUpRight']">
+            <div
+              [ngClass]="[(activatedMentalSection == true) ? 'col-md-7': 'col-md-12',(activatedMentalSection == true) ? 'rotateOutUpLeft': 'rotateOutUpRight']">
               <div class="card-image ">
                 <div class="text-white text-center d-flex align-items-center py-5 px-4 rounded">
                   <div class="center-align-db box_head_holder" id="mentalSection_title">
-                    <h3 class="py-3 font-weight-bold box_title" [ngClass]="{ 'tranform_text' :(activatedMentalSection == false)}">
+                    <h3 class="py-3 font-weight-bold box_title"
+                      [ngClass]="{ 'tranform_text' :(activatedMentalSection == false)}">
                       <strong>Mental</strong>
                     </h3>
                     <button [ngClass]="{ 'hide' :(activatedMentalSection == false)}" type="button" mdbBtn color="light"
@@ -117,63 +122,79 @@
   </div>
   <br />
   <br />
-  
+
   <!-- add new tree node start-->
 
   <div class="tf-tree example">
     <ul>
       <li>
-        <span class="tf-nc"><span>Climbing</span><br />
-          <i class="fas fa-plus-square"></i>
+        <span class="tf-nc"><span class="t-margin">Climbing</span>
           <br />
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="img-burst" alt="aligment">
+          <button type="button" class="btn btn-danger t-icon-btn waves-effect waves-light t-margin">+</button>
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="img-round-shape t-margin" alt="...">
         </span>
         <ul>
           <li>
-            <span class="tf-nc">
-              <span>Climbing</span><br />
-              <i class="fas fa-plus-square"></i> 
-              <br /><br />
-              <div class="img-burst"></div>
+            <span class="tf-nc"><span class="t-margin">Climbing</span>
+              <br />
+              <button type="button" class="btn btn-danger t-icon-btn waves-effect waves-light t-margin">+</button>
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="img-round-shape t-margin"
+                alt="...">
             </span>
             <ul>
-              <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+              <li><span class="tf-nc"><span class="t-margin">Climbing</span>
                   <br />
-                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
-                    alt="aligment"></span></li>
+                  <button type="button" class="btn btn-danger t-icon-btn waves-effect waves-light t-margin">+</button>
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="img-round-shape t-margin"
+                    alt="...">
+                </span></li>
               <li>
                 <span class="tf-nc"><i class="fas fa-plus-square"></i></span>
                 <ul>
-                  <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+                  <li><span class="tf-nc"><span class="t-margin">Climbing</span>
                       <br />
-                      <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
-                        alt="aligment"></span></li>
-                  <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+                      <button type="button"
+                        class="btn btn-danger t-icon-btn waves-effect waves-light t-margin">+</button>
+                      <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg"
+                        class="img-round-shape t-margin" alt="...">
+                    </span></li>
+                  <li><span class="tf-nc"><span class="t-margin">Climbing</span>
                       <br />
-                      <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
-                        alt="aligment"></span></li>
+                      <button type="button"
+                        class="btn btn-danger t-icon-btn waves-effect waves-light t-margin">+</button>
+                      <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg"
+                        class="img-round-shape t-margin" alt="...">
+                    </span></li>
                 </ul>
               </li>
-              <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+              <li><span class="tf-nc"><span class="t-margin">Climbing</span>
                   <br />
-                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
-                    alt="aligment"></span></li>
+                  <button type="button" class="btn btn-danger t-icon-btn waves-effect waves-light t-margin">+</button>
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="img-round-shape t-margin"
+                    alt="...">
+                </span></li>
             </ul>
           </li>
           <li>
-            <span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+            <span class="tf-nc"><span class="t-margin">Climbing</span>
               <br />
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block" alt="aligment">
+              <button type="button" class="btn btn-danger t-icon-btn waves-effect waves-light t-margin">+</button>
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="img-round-shape t-margin"
+                alt="...">
             </span>
             <ul>
-              <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+              <li><span class="tf-nc"><span class="t-margin">Climbing</span>
                   <br />
-                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
-                    alt="aligment"></span></li>
-              <li><span class="tf-nc"><span>Climbing</span><br /><i class="fas fa-plus-square"></i>
+                  <button type="button" class="btn btn-danger t-icon-btn waves-effect waves-light t-margin">+</button>
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="img-round-shape t-margin"
+                    alt="...">
+                </span></li>
+              <li><span class="tf-nc"><span class="t-margin">Climbing</span>
                   <br />
-                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded mx-auto d-block"
-                    alt="aligment"></span></li>
+                  <button type="button" class="btn btn-danger t-icon-btn waves-effect waves-light t-margin">+</button>
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="img-round-shape t-margin"
+                    alt="...">
+                </span></li>
             </ul>
           </li>
         </ul>
