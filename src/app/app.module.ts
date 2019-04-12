@@ -39,6 +39,7 @@ import {
 } from "@angular/material";
 import { AttributePipe } from './pipes/attribute.pipe';
 import { ConfirmDialogComponent } from "./components/utils/confirm-dialog/confirm-dialog.component";
+import { SkillTreeComponent } from './components/skills/skill-tree/skill-tree.component';
 // import { SkillAddEditComponent } from "./components/skills/skill-add-edit/skill-add-edit.component";
 // import { SkillsTreeComponent } from "./components/skills/skills-tree/skills-tree.component";
 // import { AttributeAddEditComponent } from "./components/skills/skill-add-edit/attribute-add-edit/attribute-add-edit.component";
@@ -60,7 +61,8 @@ import { ConfirmDialogComponent } from "./components/utils/confirm-dialog/confir
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    HeaderSliderComponent
+    HeaderSliderComponent,
+    SkillTreeComponent
   ],
   imports: [
     BrowserModule,
