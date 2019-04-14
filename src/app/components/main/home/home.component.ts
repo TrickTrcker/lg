@@ -16,6 +16,7 @@ import * as $ from 'jquery';
 })
 export class HomeComponent implements OnInit {
   activities: Array<Skill>;
+  heading:any
 
   phisicalSkill = {
     uid: 'FD57F4000FF141F5B390B4E703DED138'
@@ -40,10 +41,10 @@ export class HomeComponent implements OnInit {
   constructor(private dialog: MatDialog,
     private activityService: ActivityService, private route: ActivatedRoute,
     @Inject(DOCUMENT) private _document: Document, private pageScrollService: PageScrollService) {
-
   }
 
   ngOnInit() {
+    this.heading="Rope Climbing"
     this.route.queryParams.subscribe(params => {
       if (!_.isEmpty(params["section"])) {
         if (params["section"] == "physical") {

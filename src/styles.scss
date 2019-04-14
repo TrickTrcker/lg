@@ -124,3 +124,19 @@ padding: 0px 4px;
 .hide{
   display: none;
 }
+
+.popover-header
+{
+  padding: 10px !important;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fff !important;
+  border : none !important
+}
+.popover-header{
+  max-width: 100%
+}
+.pop-btn
+{
+  font-size: 9px;
+}

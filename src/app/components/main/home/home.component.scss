@@ -17,6 +17,13 @@ $width: 100%;
 .m-r-0 {
     margin-right: 0 !important
 }
+.p-l-0 {
+  padding-left: 0px !important
+}
+
+.p-r-0 {
+  padding-right: 0px !important
+}
 
 .p-l-5 {
     padding-left: 5px !important
@@ -214,7 +221,7 @@ $width: 100%;
 }
 
 .contentSection {
-    margin: 5px 0px;
+    margin: 5px 5px;
     clear: both;
 
     .tranform_text {
