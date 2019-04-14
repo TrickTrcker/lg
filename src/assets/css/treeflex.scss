@@ -212,178 +212,176 @@ $secondary_color:red;
             border-left-style: solid;
         }
     }
-
-    .img-rhombus-shape {
-        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-        width: 120px;
-        height: 120px;
-    }
-
-    .img-round-shape {
-        -webkit-clip-path: inset(0% 0% 0% 0% round 5% 5% 5% 5%);
-        clip-path: inset(0% 0% 0% 0% round 5% 5% 5% 5%);
-        width: 120px;
-        height: 120px;
-    }
-
-    .img-octagon-shape {
-        -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-        width: 120px;
-        height: 120px;
-    }
-
-    .img-circle-shape {
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        width: 120px;
-        height: 120px;
-    }
-
-    .t-icon-btn {
-        color: #ffff;
-        font-size: 24px;
-        font-size: 20px;
-        background: #f85836 !important;
-        border-radius: 8px;
-        width: 35px;
-        height: 35px;
-    }
-
-    .t-margin {
-        margin: 5px 0px 5px 0px;
-    }
-
-    .round-shape-container {
-        -webkit-clip-path: inset(3% 0% 3% 0% round 5% 5% 5% 5%);
-        clip-path: inset(3% 0% 3% 0% round 5% 5% 5% 5%);
-        position: relative;
-        width: 120px;
-    }
-
-    .round-shape-container .overlay {
-        position: absolute;
-        top: 44%;
-        bottom: 0%;
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.5);
-        color: #f1f1f1;
-        width: 100%;
-        transition: .5s ease;
-        opacity: 1;
-        color: white;
-        font-size: 16px;
-        text-align: center;
-    }
-
-    .circle-shape-container {
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        width: 120px;
-        height: 120px;
-    }
-
-    .circle-shape-container .overlay {
-        position: absolute;
-        top: 50%;
-        bottom: 0%;
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.5);
-        color: #f1f1f1;
-        width: 100%;
-        transition: .5s ease;
-        opacity: 1;
-        color: white;
-        font-size: 16px;
-        text-align: center;
-    }
-
-    .octagon-shape-container {
-        -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-        width: 120px;
-        height: 120px;
-    }
-
-    .octagon-shape-container .overlay {
-        position: absolute;
-        top: 50%;
-        bottom: 0%;
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.5);
-        color: #f1f1f1;
-        width: 100%;
-        transition: .5s ease;
-        opacity: 1;
-        color: white;
-        font-size: 16px;
-        text-align: center;
-    }
-
-    .rhombus-shape-container {
-        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-        position: relative;
-        width: 120px;
-    }
-
-    .rhombus-shape-container .overlay {
-        position: absolute;
-        top: 50%;
-        bottom: 0%;
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.5);
-        color: #f1f1f1;
-        width: 100%;
-        transition: .5s ease;
-        opacity: 1;
-        color: white;
-        font-size: 16px;
-        text-align: center;
-    }
-
-    .t-margin-3 {
-        margin-left: 30px;
-        // margin-left: 0px;
-
-    }
-
-    .round-img-lg {
-        width: 200px;
-        height: 220px;
-    }
-
-    .progress-66 {
-        top: 44% !important;
-    }
-
-    .progress-100 {
-        top: 0% !important;
-    }
-
-    .progress-72 {
-        top: 28% !important;
-    }
-
-    .progress-89 {
-        top: 11% !important;
-    }
-
-    .progress-56 {
-        top: 44% !important;
-    }
-
-    .progress-30 {
-        top: 70% !important;
-    }
-
-    .bg-none {
-        background: none !important;
-    }
-
-    .bg-text-center {
-        top: 60% !important;
-        width: 80% !important;
-    }
 }
+
+.img-rhombus-shape {
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    width: 120px;
+    height: 120px;
+}
+
+.img-round-shape {
+    -webkit-clip-path: inset(0% 0% 0% 0% round 5% 5% 5% 5%);
+    clip-path: inset(0% 0% 0% 0% round 5% 5% 5% 5%);
+    width: 120px;
+    height: 120px;
+}
+
+.img-octagon-shape {
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    width: 120px;
+    height: 120px;
+}
+
+.img-circle-shape {
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    width: 120px;
+    height: 120px;
+}
+
+
+
+
+
+.round-shape-container {
+    -webkit-clip-path: inset(3% 0% 3% 0% round 5% 5% 5% 5%);
+    clip-path: inset(3% 0% 3% 0% round 5% 5% 5% 5%);
+    position: relative;
+    width: 120px;
+}
+
+.round-shape-container .overlay {
+    position: absolute;
+    top: 44%;
+    bottom: 0%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 1;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.circle-shape-container {
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    width: 120px;
+    height: 120px;
+}
+
+.circle-shape-container .overlay {
+    position: absolute;
+    top: 50%;
+    bottom: 0%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 1;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.octagon-shape-container {
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    width: 120px;
+    height: 120px;
+}
+
+.octagon-shape-container .overlay {
+    position: absolute;
+    top: 50%;
+    bottom: 0%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 1;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.rhombus-shape-container {
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: relative;
+    width: 120px;
+}
+
+.rhombus-shape-container .overlay {
+    position: absolute;
+    top: 50%;
+    bottom: 0%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 1;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.t-margin-3 {
+    margin-left: 30px;
+    // margin-left: 0px;
+
+}
+
+.round-img-lg {
+    width: 200px;
+    height: 220px;
+}
+
+.progress-66 {
+    top: 44% !important;
+}
+
+.progress-100 {
+    top: 0% !important;
+}
+
+.progress-72 {
+    top: 28% !important;
+}
+
+.progress-89 {
+    top: 11% !important;
+}
+
+.progress-56 {
+    top: 44% !important;
+}
+
+.progress-30 {
+    top: 70% !important;
+}
+progress-35{
+    top: 65% !important;
+}
+
+.bg-none {
+    background: none !important;
+}
+
+.bg-text-center {
+    top: 60% !important;
+    width: 80% !important;
+}
+
+
+
+ 
+
