@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+// @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 $bottom-margin: 90px;
 $line-width: 1px;
@@ -21,17 +21,17 @@ $span-parent-point-top:-45px;
 //     // -webkit-font-smoothing: antialiased !important;
 // }
 
-h2 {
-    text-align: center;
-    color: #DE5454;
-    margin: 50px;
+// h2 {
+//     text-align: center;
+//     color: #DE5454;
+//     margin: 50px;
 
-    i {
-        display: block;
-        font-size: 12px;
-        font-weight: normal;
-    }
-}
+//     i {
+//         display: block;
+//         font-size: 12px;
+//         font-weight: normal;
+//     }
+// }
 
 hr {
     margin: 50px 0;
@@ -40,21 +40,21 @@ hr {
     background-color: $bg-color - 30;
 }
 
-body {
-    background: $bg-color;
-    font-family: 'Poppins', sans-serif;
-}
+// body {
+//     background: $bg-color;
+//     font-family: 'Poppins', sans-serif;
+// }
 
-p {
-    margin: 0;
-    background-color: #fff;
-    color: #DE5454;
-    padding: 30px;
-    border-radius: 7px;
-    min-width: 70px;
-    text-align: center;
-    box-shadow: 0 3px 6px rgba(#CC8367, 0.22);
-}
+// p {
+//     margin: 0;
+//     background-color: #fff;
+//     color: #DE5454;
+//     padding: 30px;
+//     border-radius: 7px;
+//     min-width: 70px;
+//     text-align: center;
+//     box-shadow: 0 3px 6px rgba(#CC8367, 0.22);
+// }
 
 .hv-wrapper {
     display: flex;
