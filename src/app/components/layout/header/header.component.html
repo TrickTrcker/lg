@@ -35,24 +35,24 @@
         <ul class="navbar-nav ml-auto nav-flex-icons">
           <li class="nav-item">
             <a class="nav-link">
-                <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+              <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
             </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link">
-                <div class="btn-group" mdbDropdown>
-                  <span class="font-weight-bold">EN</span>  
-                  <mdb-icon fas icon="caret-down"  mdbDropdownToggle></mdb-icon>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <div class="divider dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
-                  </div>
+            <a class="nav-link">
+              <div class="btn-group" mdbDropdown>
+                <span class="font-weight-bold">EN</span>
+                <mdb-icon fas icon="caret-down" mdbDropdownToggle></mdb-icon>
+                <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="divider dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Separated link</a>
                 </div>
-              </a>
-            </li>
+              </div>
+            </a>
+          </li>
         </ul>
       </links>
     </mdb-navbar>
@@ -72,7 +72,7 @@
             data-wow-delay="0.3s">
             <div class="banner_desc system_border_radius">
               <h1 class="h1-responsive font-weight-bold ">How does it works </h1>
-              <hr class="hr-light">
+              <!-- <hr class="hr-light"> -->
               <h6 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi
                 fuga nesciunt
                 dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiaeLorem ipsum
@@ -95,15 +95,19 @@
       <div class="container-fluid">
         <!--Grid row-->
         <div class="row arrowholder">
-          <div class="col-md-6 text-md-center">
-            <a class="arrow_btn" [routerLink]="['home']" [queryParams]="{ section: 'physical'}" (click)="scrollToSection('#physicalSection')" >
-              <mdb-icon fas class="physical_themecolorLight pr-3 arrow_bounce" data-wow-delay="1s" icon="chevron-down" size="4x">
+          <div class="col-md-6 col-sm-6 col-xs-6" style="width:50% !important;text-align: center;">
+            <a class="arrow_btn" [routerLink]="['home']" [queryParams]="{ section: 'physical'}"
+              (click)="scrollToSection('#physicalSection')">
+              <mdb-icon fas class="physical_themecolorLight arrow_bounce" data-wow-delay="1s" icon="chevron-down"
+                size="4x">
               </mdb-icon>
             </a>
           </div>
-          <div class="col-md-6 text-md-center">
-            <a class="arrow_btn " [routerLink]="['home']" [queryParams]="{ section: 'mental'}" (click)="scrollToSection('#mentalSection')">
-              <mdb-icon fas class="mental_themecolorLight pr-3 arrow_bounce" data-wow-delay="1s" icon="chevron-down" size="4x">
+          <div class="col-md-6 col-sm-6 col-xs-6" style="width:50% !important;text-align: center;">
+            <a class="arrow_btn " [routerLink]="['home']" [queryParams]="{ section: 'mental'}"
+              (click)="scrollToSection('#mentalSection')">
+              <mdb-icon fas class="mental_themecolorLight arrow_bounce" data-wow-delay="1s" icon="chevron-down"
+                size="4x">
               </mdb-icon>
             </a>
           </div>
@@ -113,4 +117,3 @@
   </div>
   <!-- Full Page Intro -->
 </header>
-

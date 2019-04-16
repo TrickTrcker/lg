@@ -1,11 +1,58 @@
 /* Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 576px) { 
+  .physicalSection {
+
+    // float: left;
+    .physicalSectionContainer {
+        background-image: url('/assets/images/physical-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: auto ;
+    }
+}
+
+.mentalSection {
+
+    // float: right;
+    .mentalSectionContainer {
+        background-image: url('/assets/images/mental-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: auto;
+    }
+}
+ }
+
 @media (min-width: 576px) { 
   .inner_lessopacity{
     margin-top: 20px;
   }
-  .physicalSectionContainer,.mentalSectionContainer{
-    height: auto !important;
-  }
+  .physicalSection {
+
+    // float: left;
+    .physicalSectionContainer {
+        background-image: url('/assets/images/physical-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 275px;
+    }
+}
+
+.mentalSection {
+
+    // float: right;
+    .mentalSectionContainer {
+        background-image: url('/assets/images/mental-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 275px;
+    }
+}
  }
 
  /* Medium devices (tablets, 768px and up) */
@@ -13,36 +60,21 @@
   .inner_lessopacity{
     margin-top: 50px;
   }
-  .physicalSectionContainer,.mentalSectionContainer{
-    height: auto !important;
-  }
  }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .physicalSectionContainer,.mentalSectionContainer{
-    height: auto !important;
-  }
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .physicalSectionContainer,.mentalSectionContainer{
-    height: auto !important;
-  }
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .physicalSectionContainer,.mentalSectionContainer{
-    height: auto !important;
-  }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .physicalSectionContainer,.mentalSectionContainer{
-    height: auto !important;
-  }
 } 
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 

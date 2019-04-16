@@ -259,37 +259,15 @@ $width: 100%;
     }
 }
 
-.physicalSection {
 
-    // float: left;
-    .physicalSectionContainer {
-        background-image: url('/assets/images/physical-bg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        height: 275px !important;
-    }
-}
-
-.mentalSection {
-
-    // float: right;
-    .mentalSectionContainer {
-        background-image: url('/assets/images/mental-bg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        height: 275px !important;
-    }
-}
 
 .rule {
     background-image: linear-gradient(to right, #5561f3 33%, rgba(255, 255, 255, 0) 0%);
     background-position: bottom;
     background-size: 10px 2px;
     background-repeat: repeat-x;
-    width: 97%;
-    margin: 20px 10px;
+    width: 100%;
+    margin: 20px 0px;
     float: left;
 }
 .rule:before{
@@ -314,3 +292,11 @@ $width: 100%;
     padding: 0 !important
 }
 .col button {padding: 0.84rem 2.14rem !important}
+.p-15
+{
+    padding: 15px !important
+}
+.p-35
+{
+    padding: 3.5rem !important
+}
