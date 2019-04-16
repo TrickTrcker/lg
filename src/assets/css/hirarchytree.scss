@@ -60,7 +60,7 @@ hr {
     display: flex;
 
     .hv-item {
-        display: flex;
+        // display: flex;
         flex-direction: column;
         margin: auto;
 
@@ -108,6 +108,7 @@ hr {
                     // background-color: $line-color;
                     left: 0;
                     border: 1px $line-border $line-color;
+                    z-index: -2;
                 }
 
                 &:before {
@@ -129,10 +130,12 @@ hr {
                 &:first-child:after {
                     left: 50%;
                     width: 50%;
+                    z-index: -2;
                 }
 
                 &:last-child:after {
                     width: calc(50% + 1px);
+                    z-index: -2;
                 }
 
             }
@@ -153,6 +156,7 @@ hr {
                 &:after {
                     top: 0;
                     transform: translateY(-100%);
+                    z-index: -2;
                 }
             }
 
@@ -164,12 +168,14 @@ hr {
                     top: auto;
                     bottom: 0;
                     transform: translateY(100%);
+                    z-index: -2;
                 }
 
                 &:after {
                     top: auto;
                     bottom: -$bottom-margin / 2;
                     transform: translateY(100%);
+                    z-index: -2;
                 }
             }
         }
@@ -260,6 +266,7 @@ hr {
         -ms-transform: translateY(100%);
         transform: translateY(100%);
         border: 1px dashed #5561f3;
+        z-index: -2;
     }
 
     .children-top-point-span {
@@ -307,16 +314,26 @@ hr {
     }
 
     .content-mg {
-        margin: 0px 30px 0px 30px;
+        margin: 0px 5px 0px 5px;
     }
 
     .content-new-mg {
-        margin: 0px 0px 0px 50px;
+        margin: 0px 0px 0px 15px;
     }
 
     .t-text-width {
-        word-break: break-word;
-        max-width: 180px;
+        // word-break: break-word;
+        max-width: 125px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        margin : 0px !important;
+        span{
+            max-width: 125px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        }
     }
 
     .img-border {
@@ -328,7 +345,7 @@ hr {
     }
 
     .childern-mg {
-        margin-left: 180px;
+        margin-left: 135px;
     }
 
     .childern-view {
@@ -339,29 +356,29 @@ hr {
     .img-rhombus-shape {
         -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-        width: 120px;
-        height: 120px;
+        width: 125px;
+        height: 125px;
     }
 
     .img-round-shape {
         -webkit-clip-path: inset(0% 0% 0% 0% round 5% 5% 5% 5%);
         clip-path: inset(0% 0% 0% 0% round 5% 5% 5% 5%);
-        width: 120px;
-        height: 120px;
+        width: 125px;
+        height: 125px;
     }
 
     .img-octagon-shape {
         -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
         clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-        width: 120px;
-        height: 120px;
+        width: 125px;
+        height: 125px;
     }
 
     .img-circle-shape {
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
-        width: 120px;
-        height: 120px;
+        width: 125px;
+        height: 125px;
     }
 
 
@@ -372,7 +389,7 @@ hr {
         -webkit-clip-path: inset(3% 0% 3% 0% round 5% 5% 5% 5%);
         clip-path: inset(3% 0% 3% 0% round 5% 5% 5% 5%);
         position: relative;
-        width: 120px;
+        width: 125px;
     }
 
     .round-shape-container .overlay {
@@ -393,8 +410,8 @@ hr {
     .circle-shape-container {
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
-        width: 120px;
-        height: 120px;
+        width: 125px;
+        height: 125px;
     }
 
     .circle-shape-container .overlay {
@@ -415,8 +432,8 @@ hr {
     .octagon-shape-container {
         -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
         clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-        width: 120px;
-        height: 120px;
+        width: 125px;
+        height: 125px;
     }
 
     .octagon-shape-container .overlay {
@@ -438,7 +455,7 @@ hr {
         -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         position: relative;
-        width: 120px;
+        width: 125px;
     }
 
     .rhombus-shape-container .overlay {
@@ -463,8 +480,8 @@ hr {
     }
 
     .round-img-lg {
-        width: 200px;
-        height: 220px;
+        width: 175px;
+        height: 175px;
     }
 
     .progress-66 {
