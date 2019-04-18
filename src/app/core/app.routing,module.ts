@@ -2,6 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from '../components/main/home/home.component';
 import { SkillTreeComponent } from '../components/skills/skill-tree/skill-tree.component';
+import {AboutUsComponent}  from '../components/main/about-us/about-us.component';
 // import { SkillsComponent } from '../components/skills/skills.component';
 // import { SkillDetailsComponent } from '../components/skills/skill-details/skill-details.component';
 // import { SkillAddEditComponent } from '../components/skills/skill-add-edit/skill-add-edit.component';
@@ -14,6 +15,7 @@ export const routes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'home', component: HomeComponent},
     { path: 'tree', component: SkillTreeComponent},
+    { path: 'aboutus', component: AboutUsComponent},
     // { path: 'skills/:id', component: SkillsComponent },
     // { path: 'skill-details/:id', component: SkillDetailsComponent },
     // { path: 'skill-add-edit', component: SkillAddEditComponent },

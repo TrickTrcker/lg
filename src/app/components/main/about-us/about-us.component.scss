@@ -1,0 +1,73 @@
+$min-height:440px;
+
+.aboutcontainer {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.bg-about {
+    background-image: url(/assets/images/about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 340px !important;
+}
+
+.bg-vision {
+    background-image: url(/assets/images/vision.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: $min-height !important;
+}
+
+.bg-mission {
+    background-image: url(/assets/images/mental-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: $min-height !important;
+}
+
+.bg-values {
+    background-image: url(/assets/images/values.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: $min-height !important;
+}
+
+.bg-motto {
+    background-image: url(/assets/images/motto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: $min-height !important;
+}
+
+.about-heading {
+    // width: 314px;
+    // height: 93px;
+    color: #ffffff; 
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 90px;
+    text-align: center;
+    letter-spacing: 0.8812439px;
+}
+
+.about-text {
+    width: 530px;
+    height: auto;
+    color: #ffffff; 
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.pt-pb {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+}

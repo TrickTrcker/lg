@@ -40,6 +40,7 @@ import {
 import { AttributePipe } from './pipes/attribute.pipe';
 import { ConfirmDialogComponent } from "./components/utils/confirm-dialog/confirm-dialog.component";
 import { SkillTreeComponent } from './components/skills/skill-tree/skill-tree.component';
+import { AboutUsComponent } from './components/main/about-us/about-us.component';
 // import { SkillAddEditComponent } from "./components/skills/skill-add-edit/skill-add-edit.component";
 // import { SkillsTreeComponent } from "./components/skills/skills-tree/skills-tree.component";
 // import { AttributeAddEditComponent } from "./components/skills/skill-add-edit/attribute-add-edit/attribute-add-edit.component";
@@ -62,7 +63,8 @@ import { SkillTreeComponent } from './components/skills/skill-tree/skill-tree.co
     HomeComponent,
     FooterComponent,
     HeaderSliderComponent,
-    SkillTreeComponent
+    SkillTreeComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
