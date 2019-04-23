@@ -9,7 +9,10 @@ $height: 250px;
 $slant: 300px;
 $gutter: 1%;
 $width: 100%;
-
+.header-bg {
+    min-height: 72vh;
+    
+}
 .m-t-5px {
     margin-top: 5px
 }

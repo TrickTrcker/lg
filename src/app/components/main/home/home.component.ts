@@ -12,7 +12,10 @@ import * as $ from 'jquery';
 @Component({
   selector: 'lga-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  styleUrls: [
+    './home.component.scss',
+    './header-banner.css'
+  ],
 })
 export class HomeComponent implements OnInit {
   activities: Array<Skill>;

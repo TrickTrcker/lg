@@ -1,16 +1,25 @@
 /* Required for full background image */
 
-.header-bg {
+html,
+body,
+header,
+.view {
   min-height: 72vh;
 }
 
 @media (max-width: 740px) {
-  .header-bg {
+  html,
+  body,
+  header,
+  .view {
     height: 1000px;
   }
 }
 @media (min-width: 800px) and (max-width: 850px) {
- .header-bg {
+  html,
+  body,
+  header,
+  .view {
     height: 600px;
   }
 }
