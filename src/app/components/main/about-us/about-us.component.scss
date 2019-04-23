@@ -12,37 +12,42 @@ $min-height:440px;
     background-position: center center;
     min-height: 340px !important;
 }
-
-.bg-vision {
-    background-image: url(/assets/images/vision.png);
+.about-box{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     min-height: $min-height !important;
 }
+.bg-vision {
+    background-image: url(/assets/images/vision.png);
+}
 
 .bg-mission {
-    background-image: url(/assets/images/mental-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    min-height: $min-height !important;
+    background-image: url(/assets/images/mission.png);
 }
 
 .bg-values {
     background-image: url(/assets/images/values.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    min-height: $min-height !important;
+    .card-body{
+        padding-top: 5.6rem !important;
+    }
+    ul.value_list{
+        text-align: left;
+        color: #fff;
+        color: #ffffff;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 35px;
+        text-align: left;
+        letter-spacing: 1px;
+    }
+    ul.value_list li{
+
+    }
 }
 
 .bg-motto {
     background-image: url(/assets/images/motto.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    min-height: $min-height !important;
 }
 
 .about-heading {
