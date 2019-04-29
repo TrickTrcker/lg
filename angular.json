@@ -65,6 +65,9 @@
               },
               {
                 "input": "src/assets/css/animation.css"
+              },
+              {
+                "input": "src/assets/scss//hover.scss"
               }
             ],
             "scripts": [
