@@ -707,44 +707,65 @@ hr {
    
         
 }
-@keyframes rotateOutUpLeft {
-    from {
-      transform-origin: left bottom;
-      opacity: 1;
-    }
+// @keyframes rotateOutUpLeft {
+//     from {
+//       transform-origin: left bottom;
+//       opacity: 1;
+//     }
   
-    to {
-      transform-origin: left bottom;
-      transform: rotate3d(0, 0, 1, -45deg);
-      opacity: 0;
-    }
-  }
+//     to {
+//       transform-origin: left bottom;
+//       transform: rotate3d(0, 0, 1, -45deg);
+//       opacity: 0;
+//     }
+//   }
   
-  .rotateOutUpLeft {
-    animation-name: rotateOutUpLeft;
-  } 
+//   .rotateOutUpLeft {
+//     animation-name: rotateOutUpLeft;
+//   } 
 
-  .dot{
-      position:absolute;
-      top:0;
-      left:0;
-      width:50px;
-      height:50px;
-      background:red;
-      border-radius:50%;
-  }
-  .sun{
-      width:200px;
-      height:200px;
-      position:absolute;
-      --webkit-animation-iteration-count:infinite;
-      --webkit-animation-timing-function:linear;
-      --webkit-animation-name:orbit;
-      --webkit-animation-duration:5s;
-      top:50px;
-      left:50px;
+//   .dot{
+//       position:absolute;
+//       top:0;
+//       left:0;
+//       width:50px;
+//       height:50px;
+//       background:red;
+//       border-radius:50%;
+//   }
+//   .sun{
+//       width:200px;
+//       height:200px;
+//       position:absolute;
+//       --webkit-animation-iteration-count:infinite;
+//       --webkit-animation-timing-function:linear;
+//       --webkit-animation-name:orbit;
+//       --webkit-animation-duration:5s;
+//       top:50px;
+//       left:50px;
+//   }
+  
+//   @-webkit-keyframes orbit { 
+//   from { -webkit-transform:rotate(0deg) } 
+//   to { -webkit-transform:rotate(360deg) } }
+
+  @keyframes square {
+    0%    {top: 0; left: 0}
+    25%   {top: 0; left: 100%;}
+    50%   {top: 100%; left: 100%;}
+    75%   {top: 100%; left: 0px;}
+    100%  {top: 0px; left: 0px;}
   }
   
-  @-webkit-keyframes orbit { 
-  from { -webkit-transform:rotate(0deg) } 
-  to { -webkit-transform:rotate(360deg) } }
+  .square-animation {
+    position: relative;
+    animation-name: square;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: inherit;
+  }
+  .animation-style{
+    height: 10px;
+    width: 10px;
+  }
