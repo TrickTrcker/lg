@@ -39,16 +39,14 @@
         <!--Grid row-->
         <div class="row arrowholder">
           <div class="col-md-6 col-sm-6 col-xs-6" style="width:50% !important;text-align: center;">
-            <a class="arrow_btn" [routerLink]="['home']" [queryParams]="{ section: 'physical'}"
-              (click)="scrollToSection('#physicalSection')">
+            <a class="arrow_btn" (click)="scrollToSection('#physicalSection')">
               <mdb-icon fas class="physical_themecolorLight arrow_bounce" data-wow-delay="1s" icon="chevron-down"
                 size="4x">
               </mdb-icon>
             </a>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-6" style="width:50% !important;text-align: center;">
-            <a class="arrow_btn " [routerLink]="['home']" [queryParams]="{ section: 'mental'}"
-              (click)="scrollToSection('#mentalSection')">
+            <a class="arrow_btn " (click)="scrollToSection('#mentalSection')">
               <mdb-icon fas class="mental_themecolorLight arrow_bounce" data-wow-delay="1s" icon="chevron-down"
                 size="4x">
               </mdb-icon>
@@ -64,14 +62,14 @@
 <!-- Main navigation -->
 <div class="hero-section container-fluid m-t-5px">
   <div class="row" style="overflow: hidden;margin:0px -10px">
-    <div class="col" style="padding: 0; position:relative;">
+    <div class="col" style="padding: 0; position:relative;" (click)="scrollToSection('#physicalSection')">
       <div class="head-bg mental-bg">
         <div class="mental-section">
           <h1>Physical</h1>
         </div>
       </div>
     </div>
-    <div class="col" style="padding: 0; position:relative;">
+    <div class="col" style="padding: 0; position:relative;" (click)="scrollToSection('#mentalSection')">
       <div class="head-bg physical-bg">
         <div class="physical-section">
           <h1>Mental</h1>
@@ -465,8 +463,8 @@
               <div class="parent-margin">
                 <div class="t-text-width"><span>Climbing</span></div>
                 <div><button type="button" class="btn btn-sm t-icon-btn">+</button></div>
-                <div mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate" placement="top" class="hvr-pulse" triggers="hover"
-                  container="body">
+                <div mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate" placement="top" class="hvr-pulse"
+                  triggers="hover" container="body">
                   <img src="/assets/images/physical/11.png" class="img-round-shape" alt="..."></div>
               </div>
               <div> <span class="child-bottom-point-span"></span> </div>
@@ -478,8 +476,8 @@
                 <div class="child-margin">
                   <div class="t-text-width"><span>Riyadh On-Sight Climbers</span></div>
                   <div><button type="button" class="btn btn-sm t-icon-btn">+</button></div>
-                  <div class="round-shape-container content-mg hvr-float" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
-                    placement="top" triggers="hover" container="body">
+                  <div class="round-shape-container content-mg hvr-float" mdbPopoverHeader={{heading}}
+                    [mdbPopover]="popTemplate" placement="top" triggers="hover" container="body">
                     <img src="/assets/images/physical/10.png" class="img-round-shape" alt="...">
                     <div class="overlay progress-72"></div>
                     <div class="overlay-text">
@@ -590,7 +588,8 @@
                                     <div class="hv-item-parent">
                                       <div> <span class="point-span"></span></div>
                                       <div class="child-margin">
-                                        <div class="t-text-width child-text-mg hvr-bounce-out"><span>Riyadh On-Sight Climbers</span>
+                                        <div class="t-text-width child-text-mg hvr-bounce-out"><span>Riyadh On-Sight
+                                            Climbers</span>
                                         </div>
                                         <div><button type="button" class="btn btn-sm t-icon-btn">+</button></div>
                                         <div class="round-shape-container content-new-mg" mdbPopoverHeader={{heading}}
@@ -610,9 +609,9 @@
                                         <div class="child-margin">
                                           <div class="t-text-width"><span>Rope Climbing</span></div>
                                           <div><button type="button" class="btn btn-sm t-icon-btn">+</button></div>
-                                          <div class="round-shape-container content-mg hvr-wobble-vertical" mdbPopoverHeader={{heading}}
-                                            [mdbPopover]="popTemplate" placement="top" triggers="hover"
-                                            container="body">
+                                          <div class="round-shape-container content-mg hvr-wobble-vertical"
+                                            mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate" placement="top"
+                                            triggers="hover" container="body">
                                             <img src="/assets/images/physical/17.png" class="img-round-shape" alt="...">
                                             <div class="overlay progress-72"></div>
                                             <div class="overlay-text"><span class="align-middle">Progrees
@@ -625,9 +624,9 @@
                                         <div class="child-margin">
                                           <div class="t-text-width"><span>New Goal</span></div>
                                           <div><button type="button" class="btn btn-sm t-icon-btn">+</button></div>
-                                          <div class="round-shape-container content-mg hvr-overline-reveal" mdbPopoverHeader={{heading}}
-                                            [mdbPopover]="popTemplate" placement="top" triggers="hover"
-                                            container="body">
+                                          <div class="round-shape-container content-mg hvr-overline-reveal"
+                                            mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate" placement="top"
+                                            triggers="hover" container="body">
                                             <img src="/assets/images/physical/12.png" class="img-round-shape" alt="...">
                                             <div class="overlay progress-66"></div>
                                             <div class="overlay-text"><span class="align-middle">Progrees
@@ -643,8 +642,9 @@
                                   <div class="child-margin">
                                     <div class="t-text-width"><span>Top Rope</span></div>
                                     <div><button type="button" class="btn btn-sm t-icon-btn">+</button></div>
-                                    <div class="round-shape-container content-mg hvr-wobble-vertical" mdbPopoverHeader={{heading}}
-                                      [mdbPopover]="popTemplate" placement="top" triggers="hover" container="body">
+                                    <div class="round-shape-container content-mg hvr-wobble-vertical"
+                                      mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate" placement="top"
+                                      triggers="hover" container="body">
                                       <img src="/assets/images/physical/16.png" class="img-round-shape" alt="...">
                                       <div class="overlay progress-66"></div>
                                       <div class="overlay-text"><span class="align-middle">Progrees <br />66/100</span>
@@ -742,8 +742,9 @@
                             <div class="child-margin">
                               <div class="t-text-width child-text-mg"><span>Needed (4)</span></div>
                               <div><button type="button" class="btn btn-sm t-icon-btn">+</button></div>
-                              <div class="octagon-shape-container content-mg hvr-bounce-out" mdbPopoverHeader={{heading}}
-                                [mdbPopover]="popTemplate" placement="top" triggers="hover" container="body">
+                              <div class="octagon-shape-container content-mg hvr-bounce-out"
+                                mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate" placement="top" triggers="hover"
+                                container="body">
                                 <img src="/assets/images/physical/15.png" class="img-octagon-shape t-margin" alt="...">
                                 <!-- <div class="overlay bg-none"></div> -->
                                 <div class="overlay-text"> <span class="align-middle">Rope</span></div>

@@ -303,3 +303,8 @@ $width: 100%;
 {
     padding: 3.5rem !important
 }
+
+#physicalSection{-webkit-transition: all 1s ease;transition: all 1s ease}
+#mentalSection{-webkit-transition: all 1s ease;transition: all 1s ease}
+
+.change {&.width {max-width: 0;}}

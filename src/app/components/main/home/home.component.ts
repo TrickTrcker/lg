@@ -19,7 +19,7 @@ import * as $ from 'jquery';
 })
 export class HomeComponent implements OnInit {
   activities: Array<Skill>;
-  heading:any
+  heading: any
 
   phisicalSkill = {
     uid: 'FD57F4000FF141F5B390B4E703DED138'
@@ -47,26 +47,29 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.heading="Rope Climbing"
-    this.route.queryParams.subscribe(params => {
-      if (!_.isEmpty(params["section"])) {
-        if (params["section"] == "physical") {
-          this.activatesection = true;
-          this.activedPhysicalSection = true;
-          this.activatedMentalSection = false;
-          setTimeout(() => {
-            $("#mentalSection_title").addClass("rotateOutUpLeft");
-          }, 5000);
-          // $("#physicalSection").addClass
-        }
-        else if (params["section"] == "mental") {
-          this.activatesection = true;
-          this.activedPhysicalSection = false;
-          this.activatedMentalSection = true;
-        }
-      }
-      console.log(params);
-    })
+    this.heading = "Rope Climbing"
+    // this.route.queryParams.subscribe(params => {
+    //   if (!_.isEmpty(params["section"])) {
+    //     if (params["section"] == "physical") {
+    //       this.activatesection = true;
+    //       this.activedPhysicalSection = true;
+    //       this.activatedMentalSection = false;
+    //       setTimeout(() => {
+    //         this.scrollToSection('#physicalSection')
+    //       });
+    //       // $("#physicalSection").addClass
+    //     }
+    //     else if (params["section"] == "mental") {
+    //       this.activatesection = true;
+    //       this.activedPhysicalSection = false;
+    //       this.activatedMentalSection = true;
+    //       setTimeout(() => {
+    //         this.scrollToSection('#mentalSection')
+    //       });
+    //     }
+    //   }
+    //   console.log(params);
+    // })
   }
   getSkillsByActivityId(skill: Skill, cleanArray: boolean) {
     this.lastSkill = skill;
@@ -125,12 +128,23 @@ export class HomeComponent implements OnInit {
     // });
   }
   public scrollToSection(section): void {
-    this.pageScrollService.scroll({
-      document: this._document,
-      scrollTarget: section,
-      scrollOffset: 55,
-      duration: 1000,
-      interruptible: false
+    if (section == '#physicalSection') {
+      this.activatesection = true;
+      this.activedPhysicalSection = true;
+      this.activatedMentalSection = false;
+    } else if (section == '#mentalSection') {
+      this.activatesection = true;
+      this.activedPhysicalSection = false;
+      this.activatedMentalSection = true;
+    }
+    setTimeout(() => {
+      this.pageScrollService.scroll({
+        document: this._document,
+        scrollTarget: section,
+        scrollOffset: 55,
+        duration: 1000,
+        interruptible: false
+      });
     });
   }
 }

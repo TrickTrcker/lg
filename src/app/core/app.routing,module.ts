@@ -12,7 +12,7 @@ import {AboutUsComponent}  from '../components/main/about-us/about-us.component'
 // import { ProfileMyStatsComponent } from '../components/profile/profile/profile-my-stats/profile-my-stats.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent},
+    { path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
     { path: 'tree', component: SkillTreeComponent},
     { path: 'aboutus', component: AboutUsComponent},
