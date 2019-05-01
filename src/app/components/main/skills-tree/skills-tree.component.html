@@ -1,0 +1,163 @@
+<section class="hv-management-hierarchy">
+    <br />
+    <br />
+    <div class="hv-container">
+        <div class="hv-wrapper">
+            <!-- Key component -->
+            <div class="hv-item" *ngFor="let skill of skillsList">
+                <div class="hv-item-parent hv-m-t">
+                    <div class="hv-card-container">
+                        <!-- <p class="hv-card-title hv-m-b">Climbing</p> -->
+                        <!--<div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>-->
+                        <div class="hv-card-body">
+                            <!-- <img src="/assets/images/physical/9.png" class="image" alt="">
+                            <div class="hv-overlay"></div>
+                            <div class="hv-overlay-text">Progrees <br> 66/100</div> -->
+                        </div>
+                    </div>
+                    <span class="hv-child-span"></span>
+                </div>
+                <div class="hv-item-parent" *ngIf="skill.parent == 1">
+                    <div class="hv-card-container">
+                        <p class="hv-card-title">{{skill.title}}</p>
+                        <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
+                        <div class="hv-card-body {{skill.animation}}" mdbPopoverHeader={{heading}}
+                            [mdbPopover]="popTemplate" placement="top" triggers="hover" container="body">
+                            <img [src]="skill.imagepath" class="image" alt="...">
+                            <div class="hv-overlay" [ngStyle]="{'height.%': skill.progrees}"></div>
+                            <div class="hv-overlay-text">Progrees <br> {{skill.progrees}}/100</div>
+                        </div>
+                    </div>
+                    <span class="hv-child-span"></span>
+                </div>
+                <div class="hv-item-children">
+                    <div class="hv-item-child" *ngFor="let skillchildren of skill.children">
+                        <div class="hv-item-parent" *ngIf="skillchildren.children == 1">
+                            <div class="hv-card-container">
+                                <p class="hv-card-title">{{skillchildren.title}}</p>
+                                <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
+                                <div class="hv-card-body {{skillchildren.animation}}" mdbPopoverHeader={{heading}}
+                                    [mdbPopover]="popTemplate" placement="top" triggers="hover" container="body">
+                                    <img [src]="skillchildren.imagepath" class="image" alt="...">
+                                    <div class="hv-overlay" [ngStyle]="{'height.%': skillchildren.progrees}"></div>
+                                    <div class="hv-overlay-text">Progrees <br> {{skillchildren.progrees}}/100</div>
+                                </div>
+                            </div>
+                            <span class="hv-child-span"></span>
+                        </div>
+                        <div class="hv-item-children">
+                            <div class="hv-item-child" *ngFor="let skillchild of skillchildren.child">
+                                <div class="hv-item-parent">
+                                    <div class="hv-card-container">
+                                        <p class="hv-card-title">{{skillchild.title}}</p>
+                                        <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
+                                        <div class="hv-card-body {{skillchild.animation}}" mdbPopoverHeader={{heading}}
+                                            [mdbPopover]="popTemplate" placement="top" triggers="hover"
+                                            container="body">
+                                            <img [src]="skillchild.imagepath" class="image" alt="...">
+                                            <div class="hv-overlay" [ngStyle]="{'height.%': skillchild.progrees}">
+                                            </div>
+                                            <div class="hv-overlay-text">Progrees <br>
+                                                {{skillchild.progrees}}/100</div>
+                                        </div>
+                                    </div>
+                                    <span class="hv-child-span"></span>
+                                </div>
+                                <div class="hv-item-children">
+                                    <div class="hv-item-child" *ngFor="let skillsubchildren of skillchild.children">
+                                        <div class="hv-item-parent" *ngIf="skillsubchildren.children == 1">
+                                            <div class="hv-card-container">
+                                                <p class="hv-card-title">{{skillsubchildren.title}}</p>
+                                                <div><button type="button" class="btn btn-sm hv-plus-button">+</button>
+                                                </div>
+                                                <div class="hv-card-body {{skillsubchildren.animation}}"
+                                                    mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                                                    placement="top" triggers="hover" container="body">
+                                                    <img [src]="skillsubchildren.imagepath" class="image" alt="...">
+                                                    <div class="hv-overlay"
+                                                        [ngStyle]="{'height.%': skillsubchildren.progrees}"></div>
+                                                    <div class="hv-overlay-text">Progrees <br>
+                                                        {{skillsubchildren.progrees}}/100</div>
+                                                </div>
+                                            </div>
+                                            <span class="hv-child-span"></span>
+                                        </div>
+                                        <div class="hv-item-children">
+                                            <div class="hv-item-child"
+                                                *ngFor="let skillsubchild of skillsubchildren.child">
+                                                <div class="hv-item-parent">
+                                                    <div class="hv-card-container">
+                                                        <p class="hv-card-title">{{skillsubchild.title}}</p>
+                                                        <div><button type="button"
+                                                                class="btn btn-sm hv-plus-button">+</button></div>
+                                                        <div class="hv-card-body {{skillsubchild.animation}}"
+                                                            mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                                                            placement="top" triggers="hover" container="body">
+                                                            <img [src]="skillsubchild.imagepath" class="image"
+                                                                alt="...">
+                                                            <div class="hv-overlay"
+                                                                [ngStyle]="{'height.%': skillsubchild.progrees}">
+                                                            </div>
+                                                            <div class="hv-overlay-text">Progrees <br>
+                                                                {{skillsubchild.progrees}}/100</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="hv-child-span"></span>
+                                                </div>
+                                                <div class="hv-item-children">
+                                                    <div class="hv-item-child"
+                                                        *ngFor="let skillsubchildrenone of skillsubchild.children">
+                                                        <div class="hv-item-parent"
+                                                            *ngIf="skillsubchildrenone.children == 1">
+                                                            <div class="hv-card-container">
+                                                                <p class="hv-card-title">{{skillsubchildrenone.title}}</p>
+                                                                <div><button type="button"
+                                                                        class="btn btn-sm hv-plus-button">+</button>
+                                                                </div>
+                                                                <div class="hv-card-body {{skillsubchildrenone.animation}}"
+                                                                    mdbPopoverHeader={{heading}}
+                                                                    [mdbPopover]="popTemplate" placement="top"
+                                                                    triggers="hover" container="body">
+                                                                    <img [src]="skillsubchildrenone.imagepath"
+                                                                        class="image" alt="...">
+                                                                    <div class="hv-overlay"
+                                                                        [ngStyle]="{'height.%': skillsubchildrenone.progrees}">
+                                                                    </div>
+                                                                    <div class="hv-overlay-text">Progrees <br>
+                                                                        {{skillsubchildrenone.progrees}}/100</div>
+                                                                </div>
+                                                            </div>
+                                                            <span class="hv-child-span"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #popTemplate>
+        <p>Rope Climbing is a sport in which compitators attempt to climp up a suspendd verticle rope using only their
+            hands</p>
+        <div class="row padding-0 ">
+            <div class="col-md-6 left padding-0 pop-btn">
+                <mdb-icon fas icon="ribbon" class="p-r-5"></mdb-icon>
+                <span>Reward </span>
+                <span class="bold">0</span>
+            </div>
+            <div class="col-md-6 left padding-0 pop-btn">
+                <mdb-icon fas icon="address-book" class="p-r-5"></mdb-icon>
+                <span>Experience</span>
+                <span class="bold">4</span>
+            </div>
+        </div>
+    </ng-template>
+</section>
