@@ -23,7 +23,7 @@ export class SkillsTreeComponent implements OnInit {
       children: [{
         children: 1,
         title: 'Riyadh On-Sight Climbers',
-        animation: 'hvr-pulse',
+        animation: 'hvr-pulse-shrink',
         imagepath: '/assets/images/physical/10.png',
         progrees: 72,
         child: [],

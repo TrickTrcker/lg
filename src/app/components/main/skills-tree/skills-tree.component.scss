@@ -164,7 +164,15 @@ section {
                     line-height: 32px;
                     text-align: center;
                     margin-top: -5px;
+                    margin-bottom: 12px;
                     font-weight: 600;
+                }
+
+                .hv-active-skill:active {
+                    -webkit-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                    transform: scale(1.2);
+                    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
                 }
 
                 .hv-card-body {

@@ -21,7 +21,7 @@
                     <div class="hv-card-container">
                         <p class="hv-card-title">{{skill.title}}</p>
                         <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
-                        <div class="hv-card-body {{skill.animation}}" mdbPopoverHeader={{heading}}
+                        <div class="hv-card-body {{skill.animation}} hv-active-skill" mdbPopoverHeader={{heading}}
                             [mdbPopover]="popTemplate" placement="top" triggers="hover" container="body">
                             <img [src]="skill.imagepath" class="image" alt="...">
                             <div class="hv-overlay" [ngStyle]="{'height.%': skill.progrees}"></div>
