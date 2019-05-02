@@ -60,7 +60,7 @@
 
 <!-- Full Page Intro -->
 <!-- Main navigation -->
-<div class="hero-section container-fluid m-t-5px">
+<div class="hero-section container-fluid m-t-5px" id="dyagonalbox">
   <div class="row" style="overflow: hidden;margin:0px -10px">
     <div class="col" style="padding: 0; position:relative;" (click)="scrollToSection('#physicalSection')">
       <div class="head-bg mental-bg">
@@ -82,7 +82,7 @@
 <section *ngIf="activatesection == true" class="contentSection text-center">
   <div class="container-fluid">
     <div class="row">
-      <div class="physicalSection p-r-5 p-l-0" id="physicalSection"
+      <div class="physicalSection p-r-5 p-l-0" id="physicalSection" (click)="scrollToSection('#physicalSection')"
         [ngClass]="[(activedPhysicalSection == true) ? 'col-md-10': 'col-md-2 d-none d-sm-block']">
         <div class="pb-2  physicalSectionContainer system_border_radius z-depth-1">
           <!--Grid row-->
@@ -131,7 +131,7 @@
           </div>
         </div>
       </div>
-      <div class="mentalSection p-r-0 p-l-0" id="mentalSection"
+      <div class="mentalSection p-r-0 p-l-0" id="mentalSection" (click)="scrollToSection('#mentalSection')"
         [ngClass]="[(activatedMentalSection == true) ? 'col-md-10': 'col-md-2 d-none d-sm-block']">
         <div class="pb-2  mentalSectionContainer system_border_radius z-depth-1">
           <div class="row m-r-0">

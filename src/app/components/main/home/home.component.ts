@@ -128,6 +128,7 @@ export class HomeComponent implements OnInit {
     // });
   }
   public scrollToSection(section): void {
+    $("#dyagonalbox").slideUp()
     if (section == '#physicalSection') {
       this.activatesection = true;
       this.activedPhysicalSection = true;
@@ -141,10 +142,10 @@ export class HomeComponent implements OnInit {
       this.pageScrollService.scroll({
         document: this._document,
         scrollTarget: section,
-        scrollOffset: 55,
+        scrollOffset: 105,
         duration: 1000,
         interruptible: false
       });
-    });
+    },500);
   }
 }
