@@ -57,7 +57,7 @@ $width: 100%;
             -moz-transform: skew(-25deg);
             transform: skew(-25deg);
             background: -webkit-linear-gradient(45deg, rgb(255, 12, 0), rgb(251, 127, 80) 100%);
-            background-image: url('/assets/images/physical-bg.png');
+            background-image: url('../../../../assets/images/physical-bg.png');
             background-size: cover;
             background-position: center center;
             border-radius: 10px 10px 10px 15px;
@@ -73,7 +73,7 @@ $width: 100%;
             -webkit-transform: skew(-25deg);
             -moz-transform: skew(-25deg);
             transform: skew(-25deg);
-            background-image: url('/assets/images/mental-bg.png');
+            background-image: url('../../../../assets/images/mental-bg.png');
             background-size: cover;
             background-position: center center;
             border-radius: 10px 10px 0px 15px;
@@ -138,11 +138,11 @@ $width: 100%;
         }
 
         .mental-img {
-            background-image: url(/assets/images/physical_section.png);
+            background-image: url(../../../../assets/images/physical_section.png);
         }
 
         .physical-img {
-            background-image: url(/assets/images/mental_section.png);
+            background-image: url(../../../../assets/images/mental_section.png);
         }
 
         h1 {
@@ -168,7 +168,7 @@ $width: 100%;
 .home-section {
 
     .mental_card {
-        background-image: url(/assets/images/mental_section.png);
+        background-image: url(../../../../assets/images/mental_section.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -185,7 +185,7 @@ $width: 100%;
     }
 
     .physical_card {
-        background-image: url(/assets/images/physical_section.png);
+        background-image: url(../../../../assets/images/physical_section.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -228,9 +228,9 @@ $width: 100%;
     clear: both;
 
     .tranform_text {
-        -webkit-transform: rotate(268deg);
-        -moz-transform: rotate(268deg);
-        -o-transform: rotate(268deg);
+        --webkit-transform: rotate(268deg);
+        --moz-transform: rotate(268deg);
+        --o-transform: rotate(268deg);
         writing-mode: bt-lr;
     }
 

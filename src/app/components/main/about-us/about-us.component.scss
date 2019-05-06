@@ -6,7 +6,7 @@ $min-height:440px;
 }
 
 .bg-about {
-    background-image: url(/assets/images/about.png);
+    background-image: url(../../../../assets/images/about.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -19,15 +19,15 @@ $min-height:440px;
     min-height: $min-height !important;
 } 
 .bg-vision {
-    background-image: url(/assets/images/vision.png);
+    background-image: url(../../../../assets/images/vision.png);
 }
 
 .bg-mission {
-    background-image: url(/assets/images/mission.png);
+    background-image: url(../../../../assets/images/mission.png);
 }
 
 .bg-values {
-    background-image: url(/assets/images/values.png);
+    background-image: url(../../../../assets/images/values.png);
     .card-body{
         padding-top: 5.6rem !important;
     }
@@ -47,7 +47,7 @@ $min-height:440px;
 }
 
 .bg-motto {
-    background-image: url(/assets/images/motto.png);
+    background-image: url(../../../../assets/images/motto.png);
 }
 
 .about-heading {
