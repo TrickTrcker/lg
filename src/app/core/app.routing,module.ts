@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HomeComponent } from '../components/main/home/home.component';
 import { SkillTreeComponent } from '../components/skills/skill-tree/skill-tree.component';
 import { AboutUsComponent } from '../components/main/about-us/about-us.component';
-// import { SkillsComponent } from '../components/skills/skills.component';
+import { SkillsTreeComponent } from '../components/main/skills-tree/skills-tree.component';
 // import { SkillDetailsComponent } from '../components/skills/skill-details/skill-details.component';
 // import { SkillAddEditComponent } from '../components/skills/skill-add-edit/skill-add-edit.component';
 // import { ProfileComponent } from '../components/profile/profile/profile.component';
@@ -16,7 +16,7 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'tree', component: SkillTreeComponent },
     { path: 'aboutus', component: AboutUsComponent },
-    // { path: 'skills/:id', component: SkillsComponent },
+    { path: 'skillstree', component: SkillsTreeComponent },
     // { path: 'skill-details/:id', component: SkillDetailsComponent },
     // { path: 'skill-add-edit', component: SkillAddEditComponent },
     // { path: 'profile', component: ProfileComponent, children: [
@@ -25,7 +25,7 @@ export const routes: Routes = [
     //     { path: 'profile-my-stats', component: ProfileMyStatsComponent}
     // ] }
 ];
- 
+
 @NgModule({
     imports: [
         RouterModule.forRoot(routes)

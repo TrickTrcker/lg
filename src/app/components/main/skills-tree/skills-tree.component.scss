@@ -216,6 +216,12 @@ section {
                     }
                 }
 
+                .hv-card-body-active {
+                    -webkit-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                    transform: scale(1.2);
+                }
+
                 .round {
                     position: relative;
 
@@ -294,7 +300,7 @@ section {
                         width: 100px;
                         left: 50%;
                         margin-left: -50px;
-                        top: 30%;
+                        top: 40%;
                         font-weight: $font-weight;
                         text-align: center;
                         letter-spacing: $letter-spacing;
@@ -337,7 +343,7 @@ section {
                         width: 100px;
                         left: 50%;
                         margin-left: -50px;
-                        top: 30%;
+                        top: 40%;
                         font-weight: $font-weight;
                         text-align: center;
                         letter-spacing: $letter-spacing;
@@ -345,7 +351,8 @@ section {
                 }
 
                 .burst {
-                    position: relative; 
+                    position: relative;
+
                     img {
                         --webkit-clip-path: inset(0% 0% 0% 0% round 5% 5% 5% 5%);
                         clip-path: inset(0% 0% 0% 0% round 5% 5% 5% 5%);
@@ -388,7 +395,7 @@ section {
                         width: 100px;
                         left: 50%;
                         margin-left: -50px;
-                        top: 30%;
+                        top: 40%;
                         font-weight: $font-weight;
                         text-align: center;
                         letter-spacing: $letter-spacing;
@@ -403,7 +410,7 @@ section {
                         clip-path: circle(50% at 50% 50%);
                         width: 100px;
                         height: 100px;
-                        border: 2px solid #f1f1f1;
+                        border: 0px solid #f1f1f1;
                         border-radius: 50%;
                     }
 
@@ -412,14 +419,14 @@ section {
                         clip-path: circle(50% at 50% 50%);
                         position: absolute;
                         bottom: 0%;
-                        background: $bg-overlay-color;
+                        background: none !important;
                         transition: .5s ease;
                         opacity: 1;
                         color: $text-overlay-color;
                         text-align: center;
                         width: 100px;
                         height: 100px;
-                        border: none; //2px solid #f1f1f1;
+                        border: none;
                         border-radius: 50%;
                     }
 
@@ -431,7 +438,7 @@ section {
                         width: 100px;
                         left: 50%;
                         margin-left: -50px;
-                        top: 30%;
+                        top: 40%;
                         font-weight: $font-weight;
                         text-align: center;
                         letter-spacing: $letter-spacing;
