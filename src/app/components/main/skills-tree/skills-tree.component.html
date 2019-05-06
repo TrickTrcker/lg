@@ -21,9 +21,9 @@
                     <div class="hv-card-container">
                         <p class="hv-card-title">{{skill.title}}</p>
                         <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
-                        <div class="hv-card-body {{skill.animation}} hv-active-skill" mdbPopoverHeader={{heading}}
+                        <div class="hv-card-body {{skill.animation}} {{skill.shape}}" mdbPopoverHeader={{heading}}
                             [mdbPopover]="popTemplate" placement="top" triggers="hover" container="body">
-                            <img [src]="skill.imagepath" class="image" alt="...">
+                            <img [src]="skill.imagepath" class="" alt="...">
                             <div class="hv-overlay" [ngStyle]="{'height.%': skill.progrees}"></div>
                             <div class="hv-overlay-text">Progrees <br> {{skill.progrees}}/100</div>
                         </div>
@@ -36,7 +36,7 @@
                             <div class="hv-card-container">
                                 <p class="hv-card-title">{{skillchildren.title}}</p>
                                 <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
-                                <div class="hv-card-body {{skillchildren.animation}}" mdbPopoverHeader={{heading}}
+                                <div class="hv-card-body {{skillchildren.animation}} {{skillchildren.shape}}" mdbPopoverHeader={{heading}}
                                     [mdbPopover]="popTemplate" placement="top" triggers="hover" container="body">
                                     <img [src]="skillchildren.imagepath" class="image" alt="...">
                                     <div class="hv-overlay" [ngStyle]="{'height.%': skillchildren.progrees}"></div>
@@ -51,7 +51,7 @@
                                     <div class="hv-card-container">
                                         <p class="hv-card-title">{{skillchild.title}}</p>
                                         <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
-                                        <div class="hv-card-body {{skillchild.animation}}" mdbPopoverHeader={{heading}}
+                                        <div class="hv-card-body {{skillchild.animation}} {{skillchild.shape}}" mdbPopoverHeader={{heading}}
                                             [mdbPopover]="popTemplate" placement="top" triggers="hover"
                                             container="body">
                                             <img [src]="skillchild.imagepath" class="image" alt="...">
@@ -70,7 +70,7 @@
                                                 <p class="hv-card-title">{{skillsubchildren.title}}</p>
                                                 <div><button type="button" class="btn btn-sm hv-plus-button">+</button>
                                                 </div>
-                                                <div class="hv-card-body {{skillsubchildren.animation}}"
+                                                <div class="hv-card-body {{skillsubchildren.animation}} {{skillsubchildren.shape}}"
                                                     mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
                                                     placement="top" triggers="hover" container="body">
                                                     <img [src]="skillsubchildren.imagepath" class="image" alt="...">
@@ -90,7 +90,7 @@
                                                         <p class="hv-card-title">{{skillsubchild.title}}</p>
                                                         <div><button type="button"
                                                                 class="btn btn-sm hv-plus-button">+</button></div>
-                                                        <div class="hv-card-body {{skillsubchild.animation}}"
+                                                        <div class="hv-card-body {{skillsubchild.animation}} {{skillsubchild.shape}}"
                                                             mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
                                                             placement="top" triggers="hover" container="body">
                                                             <img [src]="skillsubchild.imagepath" class="image"
@@ -114,7 +114,7 @@
                                                                 <div><button type="button"
                                                                         class="btn btn-sm hv-plus-button">+</button>
                                                                 </div>
-                                                                <div class="hv-card-body {{skillsubchildrenone.animation}}"
+                                                                <div class="hv-card-body {{skillsubchildrenone.animation}} {{skillsubchildrenone.shape}}"
                                                                     mdbPopoverHeader={{heading}}
                                                                     [mdbPopover]="popTemplate" placement="top"
                                                                     triggers="hover" container="body">
