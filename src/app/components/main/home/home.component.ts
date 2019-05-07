@@ -47,29 +47,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.heading = "Rope Climbing"
-    // this.route.queryParams.subscribe(params => {
-    //   if (!_.isEmpty(params["section"])) {
-    //     if (params["section"] == "physical") {
-    //       this.activatesection = true;
-    //       this.activedPhysicalSection = true;
-    //       this.activatedMentalSection = false;
-    //       setTimeout(() => {
-    //         this.scrollToSection('#physicalSection')
-    //       });
-    //       // $("#physicalSection").addClass
-    //     }
-    //     else if (params["section"] == "mental") {
-    //       this.activatesection = true;
-    //       this.activedPhysicalSection = false;
-    //       this.activatedMentalSection = true;
-    //       setTimeout(() => {
-    //         this.scrollToSection('#mentalSection')
-    //       });
-    //     }
-    //   }
-    //   console.log(params);
-    // })
+    this.heading = "Rope Climbing";
   }
   getSkillsByActivityId(skill: Skill, cleanArray: boolean) {
     this.lastSkill = skill;
@@ -120,12 +98,6 @@ export class HomeComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
     dialogConfig.panelClass = "custom-dialog-container";
-    // const dialogRef = this.dialog.open(SkillAddEditComponent, dialogConfig);
-    // dialogRef.componentInstance.parentTreeSkillId = this.parentSkillId;
-    // dialogRef.componentInstance.skill = {parentSkillId: this.lastSkill.uid} as Skill;
-    // dialogRef.componentInstance.reload.subscribe(() => {
-    //   this.skillsTreeComponentRef.initTree();
-    // });
   }
   public scrollToSection(section): void {
     $("#dyagonalbox").slideUp()

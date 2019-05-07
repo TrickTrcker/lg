@@ -4,175 +4,46 @@
     <div class="hv-container">
         <div class="hv-wrapper">
             <!-- Key component -->
-            <div class="hv-item" *ngFor="let skill of skillsList">
+            <div class="hv-item">
                 <div class="hv-item-parent hv-m-t">
                     <div class="hv-card-container">
-                        <!-- <p class="hv-card-title hv-m-b">Climbing</p> -->
-                        <!--<div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>-->
                         <div class="hv-card-body">
-                            <!-- <img src="/assets/images/physical/9.png" class="image" alt="">
-                            <div class="hv-overlay"></div>
-                            <div class="hv-overlay-text">Progrees <br> 66/100</div> -->
                         </div>
                     </div>
                     <span class="hv-child-span"></span>
                 </div>
-                <div class="hv-item-parent" *ngIf="skill.parent == 1">
-                    <div class="hv-card-container">
-                        <p class="hv-card-title">{{skill.title}}</p>
-                        <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
-                        <div class="hv-card-body {{skill.animation}} {{skill.shape}}" mdbPopoverHeader={{heading}}
-                            [mdbPopover]="popTemplate" placement="top" triggers="hover" [ngClass]="{ 'hv-card-body-active' : (selectedSkillId == skill.id)}" container="body" (click)="changeSkillData($event,skill)">
-                            <img [src]="skill.imagepath" class="" alt="...">
-                            <div class="hv-overlay" [ngStyle]="{'height.%': skill.progrees}"></div>
-                            <ng-container *ngIf="skill.skillname == null || skill.skillname == undefined || skill.skillname == '' ; then thenBlock; else elseBlock">
-                            </ng-container>
-                            <ng-template #thenBlock>
-                                <div class="hv-overlay-text">Progrees <br> {{skill.progrees}}/100</div>
-                            </ng-template>
-                            <ng-template #elseBlock>
-                                <div class="hv-overlay-text">{{skill.skillname}}</div>
-                            </ng-template>
-                        </div>
-                    </div>
-                    <span class="hv-child-span"></span>
-                </div>
-                <div class="hv-item-children">
-                    <div class="hv-item-child" *ngFor="let skillchildren of skill.children">
-                        <div class="hv-item-parent" *ngIf="skillchildren.children == 1">
-                            <div class="hv-card-container">
-                                <p class="hv-card-title">{{skillchildren.title}}</p>
-                                <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
-                                <div class="hv-card-body {{skillchildren.animation}} {{skillchildren.shape}}"
-                                    mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate" placement="top" triggers="hover"
-                                    container="body" [ngClass]="{ 'hv-card-body-active' : (selectedSkillId == skillchildren.id)}" (click)="changeSkillData($event,skillchildren)">
-                                    <img [src]="skillchildren.imagepath" class="image" alt="...">
-                                    <div class="hv-overlay" [ngStyle]="{'height.%': skillchildren.progrees}"></div>
-                                    <ng-container *ngIf="skillchildren.skillname == null || skillchildren.skillname == undefined || skillchildren.skillname == '' ; then thenBlock; else elseBlock">
-                                    </ng-container>
-                                    <ng-template #thenBlock>
-                                        <div class="hv-overlay-text">Progrees <br> {{skillchildren.progrees}}/100</div>
-                                    </ng-template>
-                                    <ng-template #elseBlock>
-                                        <div class="hv-overlay-text">{{skillchildren.skillname}}</div>
-                                    </ng-template>
-                                </div>
-                            </div>
-                            <span class="hv-child-span"></span>
-                        </div>
-                        <div class="hv-item-children">
-                            <div class="hv-item-child" *ngFor="let skillchild of skillchildren.child">
-                                <div class="hv-item-parent">
-                                    <div class="hv-card-container">
-                                        <p class="hv-card-title">{{skillchild.title}}</p>
-                                        <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
-                                        <div class="hv-card-body {{skillchild.animation}} {{skillchild.shape}}"
-                                            mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate" placement="top"
-                                            triggers="hover" container="body" [ngClass]="{ 'hv-card-body-active' : (selectedSkillId == skillchild.id)}" (click)="changeSkillData($event,skillchild)">
-                                            <img [src]="skillchild.imagepath" class="image" alt="...">
-                                            <div class="hv-overlay" [ngStyle]="{'height.%': skillchild.progrees}">
-                                            </div>
-                                            <ng-container *ngIf="skillchild.skillname == null || skillchild.skillname == undefined || skillchild.skillname =='' ; then thenBlock else elseBlock">
-                                            </ng-container>
-                                            <ng-template #thenBlock>
-                                                <div class="hv-overlay-text">Progrees <br> {{skillchild.progrees}}/100</div>
-                                            </ng-template>
-                                            <ng-template #elseBlock>
-                                                <div class="hv-overlay-text">{{skillchild.skillname}}</div>
-                                            </ng-template>
-                                        </div>
-                                    </div>
-                                    <span class="hv-child-span"></span>
-                                </div>
-                                <div class="hv-item-children">
-                                    <div class="hv-item-child" *ngFor="let skillsubchildren of skillchild.children">
-                                        <div class="hv-item-parent" *ngIf="skillsubchildren.children == 1">
-                                            <div class="hv-card-container">
-                                                <p class="hv-card-title">{{skillsubchildren.title}}</p>
-                                                <div><button type="button" class="btn btn-sm hv-plus-button">+</button>
-                                                </div>
-                                                <div class="hv-card-body {{skillsubchildren.animation}} {{skillsubchildren.shape}}"
-                                                    mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate" placement="top"
-                                                    triggers="hover" container="body" [ngClass]="{ 'hv-card-body-active' : (selectedSkillId == skillsubchildren.id)}" (click)="changeSkillData($event,skillsubchildren)">
-                                                    <img [src]="skillsubchildren.imagepath" class="image" alt="...">
-                                                    <div class="hv-overlay" [ngStyle]="{'height.%': skillsubchildren.progrees}"></div>
-                                                    <ng-container *ngIf="skillsubchildren.skillname == null || skillsubchildren.skillname == undefined || skillsubchildren.skillname =='' ; then thenBlock else elseBlock">
-                                                    </ng-container>
-                                                    <ng-template #thenBlock>
-                                                        <div class="hv-overlay-text">Progrees <br>
-                                                            {{skillsubchildren.progrees}}/100</div>
-                                                    </ng-template>
-                                                    <ng-template #elseBlock>
-                                                        <div class="hv-overlay-text">{{skillsubchildren.skillname}}</div>
-                                                    </ng-template>
-                                                </div>
-                                            </div>
-                                            <span class="hv-child-span"></span>
-                                        </div>
-                                        <div class="hv-item-children">
-                                            <div class="hv-item-child" *ngFor="let skillsubchild of skillsubchildren.child">
-                                                <div class="hv-item-parent">
-                                                    <div class="hv-card-container">
-                                                        <p class="hv-card-title">{{skillsubchild.title}}</p>
-                                                        <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
-                                                        <div class="hv-card-body {{skillsubchild.animation}} {{skillsubchild.shape}}"
-                                                            mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
-                                                            placement="top" triggers="hover" container="body" [ngClass]="{ 'hv-card-body-active' : (selectedSkillId == skillsubchild.id)}" (click)="changeSkillData($event,skillsubchild)">
-                                                            <img [src]="skillsubchild.imagepath" class="image" alt="...">
-                                                            <div class="hv-overlay" [ngStyle]="{'height.%': skillsubchild.progrees}"></div>
-                                                            <ng-container *ngIf="skillsubchild.skillname == null || skillsubchild.skillname == undefined || skillsubchild.skillname =='' ; then thenBlock else elseBlock">
-                                                            </ng-container>
-                                                            <ng-template #thenBlock>
-                                                                <div class="hv-overlay-text">Progrees <br>
-                                                                    {{skillsubchild.progrees}}/100</div>
-                                                            </ng-template>
-                                                            <ng-template #elseBlock>
-                                                                <div class="hv-overlay-text">{{skillsubchild.skillname}}</div>
-                                                            </ng-template>
-                                                        </div>
-                                                    </div>
-                                                    <span class="hv-child-span"></span>
-                                                </div>
-                                                <div class="hv-item-children">
-                                                    <div class="hv-item-child" *ngFor="let skillsubchildrenone of skillsubchild.children">
-                                                        <div class="hv-item-parent" *ngIf="skillsubchildrenone.children == 1">
-                                                            <div class="hv-card-container">
-                                                                <p class="hv-card-title">{{skillsubchildrenone.title}}</p>
-                                                                <div><button type="button" class="btn btn-sm hv-plus-button">+</button>
-                                                                </div>
-                                                                <div class="hv-card-body {{skillsubchildrenone.animation}} {{skillsubchildrenone.shape}}"
-                                                                    mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
-                                                                    placement="top" triggers="hover" container="body" [ngClass]="{ 'hv-card-body-active' : (selectedSkillId == skillsubchildrenone.id)}" (click)="changeSkillData($event,skillsubchildrenone)">
-                                                                    <img [src]="skillsubchildrenone.imagepath" class="image"
-                                                                        alt="...">
-                                                                    <div class="hv-overlay" [ngStyle]="{'height.%': skillsubchildrenone.progrees}"></div>
-                                                                    <ng-container *ngIf="skillsubchildrenone.skillname == null || skillsubchildrenone.skillname == undefined || skillsubchildrenone.skillname =='' ; then thenBlock else elseBlock">
-                                                                    </ng-container>
-                                                                    <ng-template #thenBlock>
-                                                                        <div class="hv-overlay-text">Progrees <br>
-                                                                            {{skillsubchildrenone.progrees}}/100</div>
-                                                                    </ng-template>
-                                                                    <ng-template #elseBlock>
-                                                                        <div class="hv-overlay-text">{{skillsubchildrenone.skillname}}</div>
-                                                                    </ng-template>
-                                                                </div>
-                                                            </div>
-                                                            <span class="hv-child-span"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <ng-container *ngTemplateOutlet="recursiveTreeList; context:{ $implicit: skillsList,parentTree : null }"></ng-container>
+                <ng-template #recursiveTreeList let-skillchildren let-parentTree='parentTree'>
+                    <div class="hv-item-parent">
+                        <div class="hv-card-container">
+                            <p class="hv-card-title">{{skillchildren.title}}</p>
+                            <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div>
+                            <div class="hv-card-body {{skillchildren.animation}} {{skillchildren.shape}}"
+                                mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate" placement="top" triggers="hover"
+                                container="body" [ngClass]="{ 'hv-card-body-active' : (selectedSkillId == skillchildren.id)}" (click)="changeSkillData($event,skillchildren)">
+                                <img [src]="skillchildren.imagepath" class="image" alt="...">
+                                <div class="hv-overlay" [ngStyle]="{'height.%': skillchildren.progrees}"></div>
+                                <ng-container *ngIf="skillchildren.skillname == null || skillchildren.skillname == undefined || skillchildren.skillname == '' ; then thenBlock; else elseBlock">
+                                </ng-container>
+                                <ng-template #thenBlock>
+                                    <div class="hv-overlay-text">Progrees <br> {{skillchildren.progrees}}/100</div>
+                                </ng-template>
+                                <ng-template #elseBlock>
+                                    <div class="hv-overlay-text">{{skillchildren.skillname}}</div>
+                                </ng-template>
                             </div>
                         </div>
+                        <span class="hv-child-span"></span>
                     </div>
-                </div>
+                    <div class="hv-item-children">
+                        <div class="hv-item-child" *ngFor="let skillchild of skillchildren.children">
+                            <ng-container *ngTemplateOutlet="recursiveTreeList; context:{ $implicit: skillchild,parentTree : skillchildren }"></ng-container>
+                        </div>
+                    </div>
+                </ng-template>
             </div>
         </div>
     </div>
-
     <ng-template #popTemplate>
         <p>Rope Climbing is a sport in which compitators attempt to climp up a suspendd verticle rope using only their
             hands</p>
