@@ -1,6 +1,7 @@
-import { Component, Inject, OnInit, ViewChild } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild,OnDestroy } from '@angular/core';
 import { ActivityService } from '../../../services/activity/activity.service';
 import { Skill } from '../../../models/skill';
+import { CommonService } from '../../../services/common.service';
 import { DOCUMENT } from '@angular/common';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
@@ -9,6 +10,8 @@ import { PageScrollService } from 'ngx-page-scroll-core';
 // import {SkillsTreeComponent} from '../../skills/skills-tree/skills-tree.component';
 import * as _ from 'lodash';
 import * as $ from 'jquery';
+import { ModalContainerComponent } from 'angular-bootstrap-md';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'lga-home',
   templateUrl: './home.component.html',
@@ -17,10 +20,10 @@ import * as $ from 'jquery';
     './header-banner.css'
   ],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit,OnDestroy {
   activities: Array<Skill>;
   heading: any
-
+  @ViewChild('treeDetailsModal') public treeDetailsModal: any;
   phisicalSkill = {
     uid: 'FD57F4000FF141F5B390B4E703DED138'
   } as Skill;
@@ -40,14 +43,30 @@ export class HomeComponent implements OnInit {
   activedPhysicalSection: boolean = false;
   activatedMentalSection: boolean = false;
   activatesection: boolean = false;
+  private _subscriptions = new Subscription();
   //  @ViewChild(SkillsTreeComponent) skillsTreeComponentRef: SkillsTreeComponent;
   constructor(private dialog: MatDialog,
-    private activityService: ActivityService, private route: ActivatedRoute,
+    private activityService: ActivityService, private route: ActivatedRoute,public CommonService : CommonService,
     @Inject(DOCUMENT) private _document: Document, private pageScrollService: PageScrollService) {
   }
-
+  ngOnDestroy() {
+    this._subscriptions.unsubscribe();
+}
   ngOnInit() {
     this.heading = "Rope Climbing";
+    this.subscribeOninit();
+  }
+  subscribeOninit() {
+    this._subscriptions.add(this.CommonService.getSkillModelEvent().subscribe((obj: any) => {
+        console.log(obj);
+        if(obj.ModelShow == false){
+          this.treeDetailsModal.hide();
+        }
+        else if(obj.ModelShow == true){
+          this.treeDetailsModal.show();
+         
+        }
+    }));
   }
   getSkillsByActivityId(skill: Skill, cleanArray: boolean) {
     this.lastSkill = skill;
@@ -120,7 +139,8 @@ export class HomeComponent implements OnInit {
       });
     },500);
   }
-  public ShowTreeDetails(treeDetailsModal : any){
-    treeDetailsModal.show();
+  public ShowTreeDetails(){
+    this.treeDetailsModal.show();
+   // this.CommonService.setSkillModelEvent({},true);
   }
 }

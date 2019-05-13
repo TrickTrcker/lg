@@ -2,19 +2,33 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import * as _ from 'lodash';
 import { animate } from '@angular/animations';
-
+import { CommonService } from '../../../services/common.service';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'lga-skills-tree',
   templateUrl: './skills-tree.component.html',
   styleUrls: ['./skills-tree.component.scss']
 })
 export class SkillsTreeComponent implements OnInit {
+  public selectedTree: any;
+  private _subscriptions = new Subscription();
   skillsList: any = [];
   selectedSkillId: any = 0;
-  constructor(private dialog: MatDialog, ) { }
-
+  constructor(private dialog: MatDialog,public CommonService : CommonService ) { }
+  ngOnDestroy() {
+    this._subscriptions.unsubscribe();
+}
   ngOnInit() {
     this.getSkillList();
+    this.subscribeOninit();
+  }
+  subscribeOninit() {
+    this._subscriptions.add(this.CommonService.getSkillModelEvent().subscribe((obj: any) => {
+        console.log(obj);
+        if(obj.ModelShow == true){
+          this.selectedTree =obj.selectedTree;
+        }
+    }));
   }
   getSkillList() {
     this.skillsList = 
@@ -223,5 +237,6 @@ export class SkillsTreeComponent implements OnInit {
   }
   changeSkillData(event, data) {
      this.selectedSkillId = data.id; 
+     this.CommonService.setSkillModelEvent(data,true);
   }
 }

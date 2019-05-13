@@ -24,6 +24,7 @@ import { NgxPageScrollCoreModule } from "ngx-page-scroll-core";
 import { NgxPageScrollModule } from "ngx-page-scroll";
 import {TabViewModule} from 'primeng/tabview';
 import {DialogModule} from 'primeng/dialog';
+import {ScrollPanelModule} from 'primeng/scrollpanel';
 import {
   MatInputModule,
   MatCheckboxModule,
@@ -44,6 +45,7 @@ import { ConfirmDialogComponent } from "./components/utils/confirm-dialog/confir
 import { AboutUsComponent } from './components/main/about-us/about-us.component';
 import { SkillsTreeComponent } from "./components/main/skills-tree/skills-tree.component";
 import { SkillDetailsComponent } from './components/main/skill-details/skill-details.component';
+import { CommonService } from './services/common.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,7 +87,8 @@ import { SkillDetailsComponent } from './components/main/skill-details/skill-det
     NgxPageScrollCoreModule,
     NgxPageScrollModule,
     TabViewModule,
-    DialogModule
+    DialogModule,
+    ScrollPanelModule
   ],
   providers: [
     {
@@ -95,7 +98,8 @@ import { SkillDetailsComponent } from './components/main/skill-details/skill-det
     },
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     MessageService,
-    TokenStorage
+    TokenStorage,
+    CommonService
   ],
   bootstrap: [AppComponent]
 })

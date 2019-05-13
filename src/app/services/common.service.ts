@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 import {FormGroup, FormControl} from '@angular/forms';
 
 import * as _ from 'lodash';
@@ -6,8 +8,17 @@ import * as _ from 'lodash';
   providedIn: 'root'
 })
 export class CommonService {
-
+  public subjectSkillModelEvent = new Subject<any>();
   constructor() { }
+  public getSkillModelEvent(): Observable<any>{
+    return this.subjectSkillModelEvent.asObservable();
+  }
+  public setSkillModelEvent(selectedTree,ModelShow){
+    this.subjectSkillModelEvent.next({
+      selectedTree: selectedTree,
+      ModelShow : ModelShow
+    });
+  }
   mappingFormData(form, formData) {
     _.forEach(Object.keys(formData), (value) => {
       let array = formData[name];

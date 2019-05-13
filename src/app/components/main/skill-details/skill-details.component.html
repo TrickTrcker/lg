@@ -1,17 +1,18 @@
 <div class="modal-dialog modal-fluid tree-details" role="document">
   <div class="modal-content ">
     <div class="modal-header">
-      <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+      <button type="button" class="close pull-right" aria-label="Close" (click)="closeSkillModel()">
         <span aria-hidden="true">×</span>
       </button>
       <div>
-        <mdb-icon fas icon="heart" size="2x" class="theme_light_text pr-2" aria-hidden="true"></mdb-icon>
-        <mdb-icon fas icon="thumbs-up" size="2x" class="theme_light_text pr-2" aria-hidden="true"></mdb-icon>
-        <mdb-icon fas icon="thumbs-down" size="2x" class="theme_light_text pr-2" aria-hidden="true"></mdb-icon>
-        <mdb-icon fas icon="flag" size="2x" class="theme_light_text pr-2" aria-hidden="true"></mdb-icon>
+        <mdb-icon fas icon="heart" size="2x" class="theme_light_text pr-1" aria-hidden="true"></mdb-icon>
+        <mdb-icon fas icon="thumbs-up" size="2x" class="theme_light_text pr-1" aria-hidden="true"></mdb-icon>
+        <mdb-icon fas icon="thumbs-down" size="2x" class="theme_light_text pr-1" aria-hidden="true"></mdb-icon>
+        <mdb-icon fas icon="flag" size="2x" class="theme_light_text pr-1" aria-hidden="true"></mdb-icon>
       </div>
     </div>
     <div class="modal-body">
+        <p-scrollPanel [style]="{width: '100%', height: 'calc( 88vh )'}">
       <!-- Grid row-->
       <div class="row text-center text-md-left">
 
@@ -23,24 +24,27 @@
             <mdb-icon fas icon="trash" size="1x" class="pr-2 skill_image_btn skill_image_delbtn" aria-hidden="true"></mdb-icon>
             <mdb-icon fas icon="pen" size="1x" class="pr-2 skill_image_btn skill_image_editbtn" aria-hidden="true"></mdb-icon>
           </div>
-          <div class="col-xl-7 col-lg-7  mb-md-0 mb-4 ">
-            <p class="grey-text">Climbing is simply the activity and sport of moving across vertical terrain like cliffs and steep mountain terrain, 
+          <div class="col-xl-7 col-lg-7  mb-md-0 mb-4 mt-md-3 no-padding">
+            <p >Climbing is simply the activity and sport of moving across vertical terrain like cliffs and steep mountain terrain, 
               including ridges and rock and ice faces. Climbing is usually done for recreation and sport, enjoyment in nature and scenic places,
                and outdoor fun. We spend most of our lives walking upright on sidewalks and trails but when we climb, 
                we learn to use our arms and legs in new ways. 
             </p>
+            <div class="clearfix mt-md-5">
+                <a class="p-2 fa-lg fb-ic">
+                    <i class="fab fa-facebook-f"> </i>
+                  </a>
+                  <!-- Twitter -->
+                  <a class="p-2 fa-lg tw-ic">
+                    <i class="fab fa-twitter"> </i>
+                  </a>
+                  <!--Dribbble -->
+                  <a class="p-2 fa-lg dribbble-ic">
+                    <i class="fab fa-dribbble"> </i>
+                  </a>
+            </div>
             <!-- Facebook-->
-            <a class="p-2 fa-lg fb-ic">
-              <i class="fab fa-facebook-f"> </i>
-            </a>
-            <!-- Twitter -->
-            <a class="p-2 fa-lg tw-ic">
-              <i class="fab fa-twitter"> </i>
-            </a>
-            <!--Dribbble -->
-            <a class="p-2 fa-lg dribbble-ic">
-              <i class="fab fa-dribbble"> </i>
-            </a>
+            
             <div class="clearfix mt-auto">
               <button mdbBtn type="button" color="light" class="clearfix mt-md-4 theme_light_btn aqquire_btn" outline="true"
                 mdbWavesEffect>Aqquire</button>
@@ -55,7 +59,7 @@
                 <mdb-icon fas icon="gift"></mdb-icon> Reward
               </div>
               <h4 class="font-weight-bold prop_count">
-                <strong>0</strong>
+                <strong class="prop_value">0</strong>
               </h4>
             </div>
             <div class="col">
@@ -63,7 +67,7 @@
                 <mdb-icon fas icon="basketball-ball"></mdb-icon>Difficulty
               </div>
               <h4 class="font-weight-bold prop_count">
-                <strong>11</strong>
+                <strong class="prop_value">11</strong>
               </h4>
             </div>
             <div class="col">
@@ -71,7 +75,7 @@
                 <mdb-icon fas icon="file-alt"></mdb-icon>Type
               </div>
               <h4 class="font-weight-bold prop_count">
-                <strong>Travel</strong>
+                <strong class="prop_value">Travel</strong>
               </h4>
             </div>
             <div class="col">
@@ -79,7 +83,7 @@
                 <mdb-icon fas icon="star"></mdb-icon>Rating
               </div>
               <h4 class="font-weight-bold prop_count">
-                <strong>3145</strong>
+                <strong class="prop_value">3145</strong>
               </h4>
             </div>
             <div class="col">
@@ -87,19 +91,19 @@
                 <mdb-icon fas icon="address-card"></mdb-icon>Experience
               </div>
               <h4 class="font-weight-bold  prop_count">
-                <strong>4</strong>
+                <strong class="prop_value">4</strong>
               </h4>
             </div>
             <div class="col">
               <div>Attribute</div>
               <h4 class="font-weight-bold  prop_count">
-                <strong>Add +/-</strong>
+                <strong class="prop_value">Add +/-</strong>
               </h4>
             </div>
             <div class="col">
               <div>ID</div>
               <h4 class="font-weight-bold  prop_count">
-                <strong>#12345678</strong>
+                <strong class="prop_value">#12345678</strong>
               </h4>
             </div>
           </div>
@@ -190,7 +194,7 @@
                     </div>
                     <div class="p-2 flex-grow-1 suggested_cotent">
                       <img src="./assets/images/mountain_trip.png" alt="Sample avatar" width="210">
-                      <p>Change the picture</p>
+                      <p class="mt-md-3">Change the picture</p>
                     </div>
                     <!-- <div class="col-md-10">
                           <img src="./assets/images/mountain_trip.png" alt="Sample avatar" width="210">
@@ -205,7 +209,7 @@
                         aria-hidden="true"></mdb-icon>
                     </div>
                     <div class="p-2 flex-grow-1 suggested_cotent">
-                      <p>Attribute,stamina increase 6 instead of 3.</p>
+                      <p class="mt-md-3">Attribute,stamina increase 6 instead of 3.</p>
                     </div>
                     <!-- <div class="col-md-10">
                             <img src="./assets/images/mountain_trip.png" alt="Sample avatar" width="210">
@@ -220,7 +224,7 @@
                         aria-hidden="true"></mdb-icon>
                     </div>
                     <div class="p-2 flex-grow-1 suggested_cotent">
-                      <p>Mountain trip added to "Favourites"</p>
+                      <p class="mt-md-3">Mountain trip added to "Favourites"</p>
                     </div>
                     <!-- <div class="col-md-10">
                               <img src="./assets/images/mountain_trip.png" alt="Sample avatar" width="210">
@@ -235,7 +239,7 @@
                         aria-hidden="true"></mdb-icon>
                     </div>
                     <div class="p-2 flex-grow-1 suggested_cotent">
-                      <p>Attribute,stamina increase 6 instead of 3.</p>
+                      <p class="mt-md-3">Attribute,stamina increase 6 instead of 3.</p>
                     </div>
                     <!-- <div class="col-md-10">
                                 <img src="./assets/images/mountain_trip.png" alt="Sample avatar" width="210">
@@ -250,7 +254,7 @@
                         aria-hidden="true"></mdb-icon>
                     </div>
                     <div class="p-2 flex-grow-1 suggested_cotent">
-                      <p>Your rating score incread by 6</p>
+                      <p class="mt-md-3">Your rating score incread by 6</p>
                     </div>
                     <!-- <div class="col-md-10">
                                   <img src="./assets/images/mountain_trip.png" alt="Sample avatar" width="210">
@@ -265,7 +269,7 @@
                         aria-hidden="true"></mdb-icon>
                     </div>
                     <div class="p-2 flex-grow-1 suggested_cotent">
-                      <p>Attribute,stamina increase 6 instead of 3.</p>
+                      <p class="mt-md-3">Attribute,stamina increase 6 instead of 3.</p>
                     </div>
                     <!-- <div class="col-md-10">
                                     <img src="./assets/images/mountain_trip.png" alt="Sample avatar" width="210">
@@ -280,7 +284,7 @@
                         aria-hidden="true"></mdb-icon>
                     </div>
                     <div class="p-2 flex-grow-1 suggested_cotent">
-                      <p>Your rating score incread by 6</p>
+                      <p class="mt-md-3">Your rating score incread by 6</p>
                     </div>
                     <!-- <div class="col-md-10">
                                       <img src="./assets/images/mountain_trip.png" alt="Sample avatar" width="210">
@@ -296,6 +300,7 @@
 
         <!-- Grid column -->
       </div>
+      </p-scrollPanel>
     </div>
   </div>
 </div>

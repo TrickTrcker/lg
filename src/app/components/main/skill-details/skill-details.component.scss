@@ -1,7 +1,10 @@
 .tree-details {
   width: 80% !important;
   max-width: 80% !important;
-
+  color: #666666;
+.no-padding{
+    padding: 0 !important;
+}
   .tree-title {
     color: #3d3d3d;
     width: 100%;
@@ -13,8 +16,8 @@
   }
 
   .modal-body {
-    height: calc(88vh);
-    overflow: auto;
+    // height: calc(88vh);
+    // overflow: auto;
 
     .tree_properties {
         margin-left: 40px;
@@ -23,6 +26,9 @@
         font-size: 14px;
         font-weight: bold !important;
         padding: 10px 0px 10px 10px;
+      }
+      .prop_value{
+        font-size: 18px;
       }
     }
     .comment_section{
@@ -75,6 +81,7 @@
         text-align: right;
         text-transform: uppercase;
         font-size: 12px;
+        cursor: pointer;
       }
 
       .comments {
