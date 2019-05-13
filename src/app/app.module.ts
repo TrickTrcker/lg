@@ -22,6 +22,8 @@ import { TokenStorage } from "./core/token.storage";
 import { HeaderSliderComponent } from "./components/layout/header-slider/header-slider.component";
 import { NgxPageScrollCoreModule } from "ngx-page-scroll-core";
 import { NgxPageScrollModule } from "ngx-page-scroll";
+import {TabViewModule} from 'primeng/tabview';
+import {DialogModule} from 'primeng/dialog';
 import {
   MatInputModule,
   MatCheckboxModule,
@@ -41,6 +43,7 @@ import { AttributePipe } from './pipes/attribute.pipe';
 import { ConfirmDialogComponent } from "./components/utils/confirm-dialog/confirm-dialog.component";
 import { AboutUsComponent } from './components/main/about-us/about-us.component';
 import { SkillsTreeComponent } from "./components/main/skills-tree/skills-tree.component";
+import { SkillDetailsComponent } from './components/main/skill-details/skill-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +54,8 @@ import { SkillsTreeComponent } from "./components/main/skills-tree/skills-tree.c
     FooterComponent,
     HeaderSliderComponent,
     AboutUsComponent,
-    SkillsTreeComponent
+    SkillsTreeComponent,
+    SkillDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +83,9 @@ import { SkillsTreeComponent } from "./components/main/skills-tree/skills-tree.c
     ToastModule,
     MatDialogModule,
     NgxPageScrollCoreModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    TabViewModule,
+    DialogModule
   ],
   providers: [
     {

@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
 
   lastSkill: Skill = new Skill();
   parentSkillId = '';
-
+  treedetails_display = false;
   slideConfig = { "slidesToShow": 3, "slidesToScroll": 3 };
 
   skillsCarousels: Array<Array<Skill>> = new Array<Array<Skill>>();
@@ -119,5 +119,8 @@ export class HomeComponent implements OnInit {
         interruptible: false
       });
     },500);
+  }
+  public ShowTreeDetails(treeDetailsModal : any){
+    treeDetailsModal.show();
   }
 }

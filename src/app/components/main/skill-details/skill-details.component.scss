@@ -1,0 +1,128 @@
+.tree-details {
+  width: 80% !important;
+  max-width: 80% !important;
+
+  .tree-title {
+    color: #3d3d3d;
+    width: 100%;
+    clear: both;
+  }
+
+  .skill_image {
+    width: 100%;
+  }
+
+  .modal-body {
+    height: calc(88vh);
+    overflow: auto;
+
+    .tree_properties {
+        margin-left: 40px;
+      .prop_count {
+        color: #787993 !important;
+        font-size: 14px;
+        font-weight: bold !important;
+        padding: 10px 0px 10px 10px;
+      }
+    }
+    .comment_section{
+        .ui-tabview.ui-tabview-top .ui-tabview-nav li{
+            border: none !important;
+            background-color: #fff !important;
+            color: #A8A8A8 !important;
+        }
+        .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active{
+            background-color: #fff !important;
+            color: #25265E !important;
+            font-weight: bold !important;
+            border: 1px solid #E8E8E8 !important;
+        }
+    }
+
+    .aqquire_btn{
+        position: absolute;
+        bottom: 30px;
+    }
+    .skill_image_btn{
+        position: absolute;
+        top: 25px;
+        color: #393939;
+    }
+    .skill_image_delbtn{
+        left: 45px;
+    }
+    .skill_image_editbtn{
+        left: 70px;
+    }
+    .comment_section {
+      .comments_author {
+        width: 55%;
+        color: #222222;
+        font-weight: 400;
+        float: left;
+        font-size: 20px;
+
+        .comment_date {
+          font-size: 13px;
+        }
+      }
+
+      .reply_text {
+        color: #B4B4B4;
+        width: 33%;
+        float: right;
+        // clear: both;
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      .comments {
+        clear: both;
+      }
+
+      .showmore_btn {
+        color: #3D3D3D;
+
+        .fas {
+          color: #393939 !important;
+          margin: 0px 10px;
+        }
+      }
+      .comment_textarea{
+        box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.16), 0 5px 20px 0 rgba(0, 0, 0, 0.16) !important;
+      }
+      
+    }
+    .suggested_box{
+        width: 100%;
+        .suggested_btn_group{
+            .suggested_arrow{
+                color: #9F9F9F !important;
+            }
+            .suggested_count{
+                color: #25265E;
+                font-size: 15px;
+            }
+        }
+        .suggested_inner{
+            min-width: calc( 70vw );
+            border-bottom: solid 1px #E8E8E8;
+            .suggested_cotent{
+                color: #25265E;
+            }
+        }
+    }
+
+  }
+
+  .theme_light_btn {
+    color: #3d3d3d !important;
+    font-weight: bold;
+  }
+
+  .theme_light_text {
+    color: #969696 !important;
+  }
+}
+

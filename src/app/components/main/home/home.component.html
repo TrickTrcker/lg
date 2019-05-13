@@ -190,7 +190,8 @@
       <div class="col">
         <div class="rule"></div>
         <div class="col-md-12 padding-0">
-          <button mdbBtn type="button" class="text-capitalize col" gradient="blue" rounded="true" mdbWavesEffect>Card
+          <button (click)="ShowTreeDetails(treeDetailsModal)" mdbBtn type="button" class="text-capitalize col"
+            gradient="blue" rounded="true" mdbWavesEffect>Card
             games</button>
         </div>
       </div>
@@ -223,9 +224,15 @@
         </div>
       </div>
     </div>
-    
+
     <!-- tree component start -->
     <div class="justify-content-center">
       <lga-skills-tree></lga-skills-tree>
     </div>
     <!-- tree component end -->
+
+    <div mdbModal #treeDetailsModal="mdbModal" class="modal fade" tabindex="-1" role="dialog"
+      aria-labelledby="myBasicModalLabel" aria-hidden="true">
+      <lga-skill-details></lga-skill-details>
+    </div>
+    
