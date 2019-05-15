@@ -1,0 +1,28 @@
+.profile_details {
+          color: #fff !important;
+  .profile_author {
+    .rounded_profileimage {
+      margin: 5% 25%;
+      width: 50%;
+    }
+  }
+  .profile_username{
+            color: #fff;
+            text-align: center;
+  }
+  .profile_email{
+            color: #fff;
+            text-align: center;
+  }
+  .menu_group{
+            .list-group-item{
+                      border: none !important;
+                      background: none !important;
+                      color: #fff !important;
+                      text-align:  center !important;
+            }
+            .active{
+                      border-left: solid 4px blue;
+            }
+  }
+}
