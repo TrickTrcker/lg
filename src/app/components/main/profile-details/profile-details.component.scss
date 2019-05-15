@@ -1,28 +1,150 @@
+$font-family: "Montserrat-SemiBold";
+$font-color:#ffffff;
+$icon-color:#ffff;
+$icon-width: 24px;
+$icon-height: 24px;
+$form-font-color:#292929;
+
 .profile_details {
-          color: #fff !important;
-  .profile_author {
-    .rounded_profileimage {
-      margin: 5% 25%;
-      width: 50%;
+    .mask {
+        // width: 350px;
+        height: 725px;
+        background: linear-gradient(180deg, #33226A, #2B7AA2);
+        box-shadow: 0px 2px 34px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+
+        .profile_avatar {
+            width: 120px;
+            height: 120px;
+            border: solid 2px $font-color;
+            box-shadow: 0px 2px 4px rgba(31, 37, 40, 0.35);
+        }
+
+        .profile_username {
+            color: $font-color;
+            font-family: $font-family;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        .profile_email {
+            color: $font-color;
+            font-family: $font-family;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        .menu_group {
+            .list-group-item {
+                border: none !important;
+                background: none !important;
+                color: #fff !important;
+                text-align: center !important;
+            }
+
+            .active {
+                border-left: solid 4px blue;
+            }
+        }
+
+        .groupname {
+            // width: 150.3px;
+            // height: 32px;
+            color: $font-color;
+            font-family: $font-family;
+            // font-size: 24px;
+            font-weight: 600;
+            // line-height: 32px;
+            text-align: center;
+            margin-bottom: 0.2rem !important;
+        }
+
+        .groupemail {
+            // width: 215.04px;
+            // height: 25px;
+            color: $font-color;
+            font-family: $font-family;
+            // font-size: 19px;
+            font-weight: 400;
+            // line-height: 25px;
+            text-align: center;
+            margin-bottom: 0.2rem !important;
+        }
+
+        .profile-icon {
+            width: $icon-width;
+            height: $icon-height;
+            color: $icon-color;
+        }
     }
-  }
-  .profile_username{
-            color: #fff;
-            text-align: center;
-  }
-  .profile_email{
-            color: #fff;
-            text-align: center;
-  }
-  .menu_group{
-            .list-group-item{
-                      border: none !important;
-                      background: none !important;
-                      color: #fff !important;
-                      text-align:  center !important;
+
+    .profile-skills {
+        // width: 896px;
+        height: 615px;
+        border-radius: 15px;
+        background: #ffffff;
+        box-shadow: 0px 2px 34px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-info {
+        // width: 896px;
+        // height: 905px;
+        border-radius: 15px;
+        background: #ffffff;
+        box-shadow: 0px 2px 34px rgba(0, 0, 0, 0.2);
+
+        .profile-form {
+            margin-right: 30px;
+            margin-left: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .profile-personal {
+                color: $form-font-color;
+                font-family: $font-family;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0.7142857px;
             }
-            .active{
-                      border-left: solid 4px blue;
+
+            .profile-heading {
+                color: #292929;
+                font-family: "Montserrat-SemiBold";
+                font-size: 18px;
+                font-weight: 400; 
+                letter-spacing: 0.7142857px
             }
-  }
+
+            .address-note {
+                height: 18px;
+                color: #a7a7a7;
+                font-family: $font-family;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 0.5555555px;
+                text-align:left;
+            }
+
+            .profile-savechanges {
+                width: 200px;
+                height: 50px;
+                border-radius: 4px;
+                background: linear-gradient(45deg, #42B63C, #338627);
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .profile_cancel {
+                width: 200px;
+                height: 50px;
+                border-radius: 4px;
+                background: linear-gradient(45deg, #F66037, #EC1D0F);
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
 }
