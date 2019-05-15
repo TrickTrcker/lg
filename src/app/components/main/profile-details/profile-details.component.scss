@@ -116,7 +116,7 @@ $form-font-color:#292929;
                 color: #292929;
                 font-family: "Montserrat-SemiBold";
                 font-size: 18px;
-                font-weight: 400; 
+                font-weight: 400;
                 letter-spacing: 0.7142857px
             }
 
@@ -127,7 +127,7 @@ $form-font-color:#292929;
                 font-size: 14px;
                 font-weight: 400;
                 letter-spacing: 0.5555555px;
-                text-align:left;
+                text-align: left;
             }
 
             .profile-savechanges {
@@ -136,6 +136,8 @@ $form-font-color:#292929;
                 border-radius: 4px;
                 background: linear-gradient(45deg, #42B63C, #338627);
                 box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+                text-transform: capitalize;
+                font-size: 14px;
             }
 
             .profile_cancel {
@@ -144,6 +146,8 @@ $form-font-color:#292929;
                 border-radius: 4px;
                 background: linear-gradient(45deg, #F66037, #EC1D0F);
                 box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+                text-transform: capitalize;
+                font-size: 14px;
             }
         }
     }
