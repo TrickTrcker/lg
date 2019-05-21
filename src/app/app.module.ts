@@ -47,6 +47,7 @@ import { SkillsTreeComponent } from "./components/main/skills-tree/skills-tree.c
 import { SkillDetailsComponent } from './components/main/skill-details/skill-details.component';
 import { CommonService } from './services/common.service';
 import { ProfileDetailsComponent } from './components/main/profile-details/profile-details.component';
+import { StartedSkillsComponent } from './components/main/started-skills/started-skills.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +60,8 @@ import { ProfileDetailsComponent } from './components/main/profile-details/profi
     AboutUsComponent,
     SkillsTreeComponent,
     SkillDetailsComponent,
-    ProfileDetailsComponent
+    ProfileDetailsComponent,
+    StartedSkillsComponent
   ],
   imports: [
     BrowserModule,

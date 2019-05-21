@@ -1,0 +1,85 @@
+<section class="hv-management-hierarchy">
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 profile-skills-tree">
+      <div class="hv-container">
+        <div class="hv-wrapper">
+          <!-- Key component -->
+          <div class="hv-item">
+            <div class="hv-item-parent hv-m-t">
+              <div class="hv-card-container">
+                <div class="hv-card-body">
+                  <h4 class="skills-title">Started skills</h4>
+
+                  <img src="./assets/images/down_arrow.svg" class="image" alt="...">
+
+                </div>
+              </div>
+              <span class="hv-child-span"></span>
+            </div>
+            <div class="hv-item-parent hv-m-t">
+              <div class="hv-card-container">
+                <div class="hv-card-body">
+                  <h4 class="skills-title">Started skills</h4>
+                </div>
+              </div>
+              <span class="hv-child-span"></span>
+            </div>
+            <ng-container *ngTemplateOutlet="recursiveTreeList; context:{ $implicit: skillsList,parentTree : null }">
+            </ng-container>
+            <ng-template #recursiveTreeList let-skillchildren let-parentTree='parentTree'>
+              <div class="hv-item-parent">
+                <div class="hv-card-container">
+                  <!-- <p class="hv-card-title">{{skillchildren.title}}</p> -->
+                  <!-- <div><button type="button" class="btn btn-sm hv-plus-button">+</button></div> -->
+                  <div class="hv-card-body  {{skillchildren.shape}}"
+                    [ngClass]="{ 'hv-card-body-active' : (selectedSkillId == skillchildren.id)}"
+                    (click)="changeSkillData($event,skillchildren)">
+                    <img [src]="skillchildren.imagepath" class="image" alt="...">
+                    <!-- <div class="hv-overlay" [ngStyle]="{'height.%': skillchildren.progrees}"></div> -->
+                    <!-- <ng-container
+                  *ngIf="skillchildren.skillname == null || skillchildren.skillname == undefined || skillchildren.skillname == '' ; then thenBlock; else elseBlock">
+                </ng-container>
+                <ng-template #thenBlock>
+                  <div class="hv-overlay-text">Progrees <br> {{skillchildren.progrees}}/100</div>
+                </ng-template>
+                <ng-template #elseBlock>
+                  <div class="hv-overlay-text">{{skillchildren.skillname}}</div>
+                </ng-template> -->
+                  </div>
+                </div>
+                <!-- <span class="hv-child-span"></span> -->
+              </div>
+              <div class="hv-item-children">
+                <div class="hv-item-child" *ngFor="let skillchild of skillchildren.children">
+                  <ng-container
+                    *ngTemplateOutlet="recursiveTreeList; context:{ $implicit: skillchild,parentTree : skillchildren }">
+                  </ng-container>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12">
+      <mdb-card-title>
+        <h4 class="skills-title">Habits</h4>
+      </mdb-card-title>
+      <div class="circle">
+        <img src="./assets/images/physical/9.png" alt="">
+        <div class="hv-overlay-text">+3 <br />Habits</div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12">
+      <mdb-card-title>
+        <h4 class="skills-title">Recent Activities</h4>
+      </mdb-card-title>
+      <div class="circle">
+        <img src="./assets/images/physical/9.png" alt="">
+        <div class="hv-overlay-text">+4 <br />Activities</div>
+      </div>
+    </div>
+  </div>
+</section>
