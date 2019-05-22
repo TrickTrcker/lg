@@ -101,8 +101,7 @@ export class StartedSkillsComponent implements OnInit {
             }],
           }
         ],
-      };
-    //  console.log(this.skillsList);
+      }; 
   }
   changeSkillData(event, data) {
     this.selectedSkillId = data.id;
