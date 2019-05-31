@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, ViewChild,OnDestroy } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { ActivityService } from '../../../services/activity/activity.service';
 import { Skill } from '../../../models/skill';
 import { CommonService } from '../../../services/common.service';
@@ -20,8 +20,9 @@ import { Subscription } from 'rxjs';
     './header-banner.css'
   ],
 })
-export class HomeComponent implements OnInit,OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy {
   activities: Array<Skill>;
+  dyagonalhide: boolean = false;
   heading: any
   @ViewChild('treeDetailsModal') public treeDetailsModal: any;
   phisicalSkill = {
@@ -46,26 +47,26 @@ export class HomeComponent implements OnInit,OnDestroy {
   private _subscriptions = new Subscription();
   //  @ViewChild(SkillsTreeComponent) skillsTreeComponentRef: SkillsTreeComponent;
   constructor(private dialog: MatDialog,
-    private activityService: ActivityService, private route: ActivatedRoute,public CommonService : CommonService,
+    private activityService: ActivityService, private route: ActivatedRoute, public CommonService: CommonService,
     @Inject(DOCUMENT) private _document: Document, private pageScrollService: PageScrollService) {
   }
   ngOnDestroy() {
     this._subscriptions.unsubscribe();
-}
+  }
   ngOnInit() {
     this.heading = "Rope Climbing";
     this.subscribeOninit();
   }
   subscribeOninit() {
     this._subscriptions.add(this.CommonService.getSkillModelEvent().subscribe((obj: any) => {
-        console.log(obj);
-        if(obj.ModelShow == false){
-          this.treeDetailsModal.hide();
-        }
-        else if(obj.ModelShow == true){
-          this.treeDetailsModal.show();
-         
-        }
+      console.log(obj);
+      if (obj.ModelShow == false) {
+        this.treeDetailsModal.hide();
+      }
+      else if (obj.ModelShow == true) {
+        this.treeDetailsModal.show();
+
+      }
     }));
   }
   getSkillsByActivityId(skill: Skill, cleanArray: boolean) {
@@ -119,7 +120,7 @@ export class HomeComponent implements OnInit,OnDestroy {
     dialogConfig.panelClass = "custom-dialog-container";
   }
   public scrollToSection(section): void {
-    $("#dyagonalbox").slideUp()
+    $("#dyagonalbox").slideUp(200)
     if (section == '#physicalSection') {
       this.activatesection = true;
       this.activedPhysicalSection = true;
@@ -129,18 +130,22 @@ export class HomeComponent implements OnInit,OnDestroy {
       this.activedPhysicalSection = false;
       this.activatedMentalSection = true;
     }
-    setTimeout(() => {
-      this.pageScrollService.scroll({
-        document: this._document,
-        scrollTarget: section,
-        scrollOffset: 105,
-        duration: 1000,
-        interruptible: false
-      });
-    },500);
+    if(!this.dyagonalhide)
+    {
+      this.dyagonalhide = true
+      setTimeout(() => {
+        this.pageScrollService.scroll({
+          document: this._document,
+          scrollTarget: section,
+          scrollOffset: 105,
+          duration: 150,
+          interruptible: false
+        });
+      }, 100);
+    }
   }
-  public ShowTreeDetails(){
+  public ShowTreeDetails() {
     this.treeDetailsModal.show();
-   // this.CommonService.setSkillModelEvent({},true);
+    // this.CommonService.setSkillModelEvent({},true);
   }
 }

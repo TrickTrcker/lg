@@ -106,22 +106,28 @@
             </div>
             <div class="col-md-4" *ngIf="activedPhysicalSection == true">
               <div class="row m-40">
-                <div class="col-lg-4 col-md-4 mx-auto">
+                <div class="col-lg-4 col-md-4 mx-auto" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/1.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
-                <div class="col-lg-4 col-md-4 mx-auto">
+                <div class="col-lg-4 col-md-4 mx-auto" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/2.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
-                <div class="col-lg-4 col-md-4 mx-auto">
+                <div class="col-lg-4 col-md-4 mx-auto" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/3.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
-                <div class="col-lg-4 col-md-4 mx-auto">
+                <div class="col-lg-4 col-md-4 mx-auto" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/4.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
-                <div class="col-lg-4 col-md-4 mx-auto">
+                <div class="col-lg-4 col-md-4 mx-auto" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/5.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
-                <div class="col-lg-4 col-md-4 mx-auto">
+                <div class="col-lg-4 col-md-4 mx-auto" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/6.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
 
@@ -156,22 +162,28 @@
 
             <div class="col-md-4" *ngIf="activatedMentalSection == true">
               <div class="row m-40">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/1.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/2.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/3.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/4.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/5.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" mdbPopoverHeader={{heading}} [mdbPopover]="popTemplate"
+                  placement="top" triggers="hover">
                   <img src="./assets/images/physical/6.jpg" class="img-fluid z-depth-3 grid_img">
                 </div>
 
@@ -190,8 +202,8 @@
       <div class="col">
         <div class="rule"></div>
         <div class="col-md-12 padding-0">
-          <button (click)="ShowTreeDetails()" mdbBtn type="button" class="text-capitalize col"
-            gradient="blue" rounded="true" mdbWavesEffect>Card
+          <button (click)="ShowTreeDetails()" mdbBtn type="button" class="text-capitalize col" gradient="blue"
+            rounded="true" mdbWavesEffect>Card
             games</button>
         </div>
       </div>
@@ -235,4 +247,20 @@
       aria-labelledby="myBasicModalLabel" aria-hidden="true">
       <lga-skill-details></lga-skill-details>
     </div>
-    
+
+    <ng-template #popTemplate>
+      <p>Rope Climbing is a sport in which compitators attempt to climp up a suspendd verticle rope using only their
+        hands</p>
+      <div class="row padding-0 ">
+        <div class="col-md-6 left padding-0 pop-btn">
+          <mdb-icon fas icon="ribbon" class="p-r-5"></mdb-icon>
+          <span>Reward </span>
+          <span class="bold">0</span>
+        </div>
+        <div class="col-md-6 left padding-0 pop-btn">
+          <mdb-icon fas icon="address-book" class="p-r-5"></mdb-icon>
+          <span>Experience</span>
+          <span class="bold">4</span>
+        </div>
+      </div>
+    </ng-template>
